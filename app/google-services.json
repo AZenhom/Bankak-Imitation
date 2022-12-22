@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "504581108816",
+    "project_id": "bankak-9f684",
+    "storage_bucket": "bankak-9f684.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504581108816:android:20f68829ef71e95c368d55",
+        "android_client_info": {
+          "package_name": "com.a2z.bankak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504581108816-p72bj0q1asu4jsgevk7n9mmqakuc2s2j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.a2z.bankak",
+            "certificate_hash": "8bfcf256f7c782b8dc320729ad6cb40039fd696d"
+          }
+        },
+        {
+          "client_id": "504581108816-brkg95dt7r70rqjusr7r2dfviqc6d7ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDATfJql9sc-CZG9d5ul3LkjbJx8WMZY7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504581108816-brkg95dt7r70rqjusr7r2dfviqc6d7ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
