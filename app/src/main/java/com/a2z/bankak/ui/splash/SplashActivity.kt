@@ -2,20 +2,21 @@ package com.a2z.bankak.ui.splash
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
-import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.NewLayoutSplashActivityBinding
+import com.a2z.bankak.ui.login.LoginActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : BaseActivity<NewLayoutSplashActivityBinding, SplashViewModel>() {
 
@@ -39,8 +40,8 @@ class SplashActivity : BaseActivity<NewLayoutSplashActivityBinding, SplashViewMo
         }
     }
 
-    private fun checkNavigation(){
-        showSuccessMsg("GIF ENDED")
+    private fun checkNavigation() {
+        startActivity(LoginActivity.getIntent(this))
     }
 
     private inner class GifRequestListener : RequestListener<GifDrawable> {
