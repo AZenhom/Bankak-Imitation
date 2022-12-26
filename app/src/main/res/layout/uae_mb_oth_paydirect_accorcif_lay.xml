@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/drawerLayout" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/uae_header_lay"/>
+        <include layout="@layout/uae_tabs"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/othFtAccChkLay" android:background="@drawable/borders" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                    <ImageView android:id="@+id/qrCodeImage" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="15dp" android:src="@drawable/slidscanandpay" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                    <com.google.android.material.textfield.TextInputLayout android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/qrCodeImage" android:layout_centerVertical="true">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/edtAccNo" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/entAccNoHint" android:ems="10" android:singleLine="true" android:maxLength="@integer/accNoMaxLen" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/othFtAccChkCifLay" android:background="@drawable/borders" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/cifSearch" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="15dp" android:src="@drawable/searchimage" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                        <com.google.android.material.textfield.TextInputLayout android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/cifSearch" android:layout_centerVertical="true">
+                            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/edtCifNo" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/mbcifHint" android:ems="10" android:singleLine="true" android:maxLength="@integer/cifMaxLen" android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/cifAccLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtChkAccSpinner" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/accSelHint" android:editable="false" android:drawableRight="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:textColor="@color/white" android:layout_gravity="right" android:id="@+id/check_Btn" android:background="@drawable/button" android:visibility="gone" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:scaleType="fitCenter" android:text="@string/submit" android:onClick="true" android:textAllCaps="false"/>
+                <include android:visibility="gone" layout="@layout/uae_mb_othft_subform_lay"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="left" android:id="@+id/drawerPane" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/uae_slidmenu_default_lay"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

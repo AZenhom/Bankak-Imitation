@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/drawerLayout" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/header_lay"/>
+            <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+                <GridView android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/childbillPaydirecGridLay" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:listSelector="#00000000" android:verticalSpacing="3dp" android:numColumns="2"/>
+            </LinearLayout>
+        </LinearLayout>
+        <include android:layout_gravity="bottom" layout="@layout/footerlay_withbg"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="right" android:id="@+id/drawerPane" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/slidmenu_default_lay"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

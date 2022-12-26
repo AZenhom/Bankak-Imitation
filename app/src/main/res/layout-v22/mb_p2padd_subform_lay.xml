@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableLayout android:id="@+id/othFtConfiTablay" android:background="@drawable/borders" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:shrinkColumns="*"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llytftdirectMobile" android:layout_width="match_parent" android:layout_height="65dp">
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/txtinputmobile" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtMobilenum" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="@string/mbnoPrefx" android:hint="@string/mbnoHint" android:singleLine="true" android:maxLength="@integer/mbnoMaxLen" android:inputType="number" android:importantForAutofill="noExcludeDescendants"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView android:layout_gravity="center" android:id="@+id/imagvewftdirectMobile" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="50dp" android:src="@drawable/newmobile"/>
+    </LinearLayout>
+    <View android:id="@+id/vewMobileNum" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtBenfNickName" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/nickNameHint" android:singleLine="true" android:maxLength="@integer/nameMaxLen" android:drawableRight="@drawable/manicon" android:drawablePadding="10dp" android:inputType="textCapWords"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <View android:id="@+id/vewEdtNickName" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <include layout="@layout/buttons_lay"/>
+</LinearLayout>

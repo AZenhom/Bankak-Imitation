@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="55dp" android:layout_below="@+id/homeHeaderLay" card_view:cardCornerRadius="2dp">
+        <RelativeLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/prevIcon" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:src="@drawable/backarr" android:layout_centerVertical="true" android:contentDescription="@string/app_name"/>
+            <TextView android:textSize="14sp" android:textColor="@color/accType" android:gravity="center_vertical" android:id="@+id/accType" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:text="" android:layout_toLeftOf="@+id/lllay" android:layout_toRightOf="@+id/prevIcon" android:layout_below="@+id/img_prof"/>
+            <TextView android:textSize="12sp" android:textColor="@color/accType" android:gravity="center_vertical" android:id="@+id/accNo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="3dp" android:text="" android:layout_toLeftOf="@+id/lllay" android:layout_toRightOf="@+id/prevIcon" android:layout_below="@+id/accType"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/lllay" android:layout_width="130dp" android:layout_height="match_parent" android:weightSum="4" android:layout_alignParentRight="true">
+                <ImageView android:layout_gravity="center" android:id="@+id/currIcon" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/sdg" android:layout_weight="0.2" android:contentDescription="@string/app_name"/>
+                <TextView android:textSize="14sp" android:textColor="@color/green" android:gravity="center" android:id="@+id/accBal" android:layout_width="0dp" android:layout_height="match_parent" android:text="" android:layout_weight="3.7" android:layout_centerVertical="true"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/nextIcon" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/backarr1" android:contentDescription="@string/app_name"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

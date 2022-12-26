@@ -66,11 +66,11 @@ open class BaseViewModel : ViewModel() {
         hideLoading()
         if (t is ErrorModel) {
             val msg: Any = when (t) {
-                is ErrorModel.Connection -> R.string.check_your_internet_connection
-                is ErrorModel.Network -> t.serverMessage ?: R.string.an_error_has_occurred
+                is ErrorModel.Connection -> R.string.netWork_Err
+                is ErrorModel.Network -> t.serverMessage ?: R.string.ser_err_digTitle
                 else -> {
                     FirebaseCrashlytics.getInstance().recordException(t.fillInStackTrace())
-                    R.string.an_error_has_occurred
+                    R.string.ser_err_digTitle
                 }
             }
             when (msg) {
@@ -78,7 +78,7 @@ open class BaseViewModel : ViewModel() {
                 is Int -> showErrorMsg(msg)
             }
         } else {
-            showErrorMsg(R.string.an_error_has_occurred)
+            showErrorMsg(R.string.err_digTitle)
         }
     }
 

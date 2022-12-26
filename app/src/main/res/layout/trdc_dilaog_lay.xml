@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@null" android:paddingTop="20dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/trcTitlelay" android:background="@drawable/dialog_headerbg_shape" android:layout_width="match_parent" android:layout_height="40dp">
+        <TextView android:textSize="18sp" android:typeface="serif" android:textStyle="normal" android:textColor="#fff" android:gravity="center" android:id="@+id/trcTitle" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/tandcTitle" android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+    <RelativeLayout android:background="@drawable/dialog_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20dp" android:layout_below="@+id/trcTitlelay">
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp" android:layout_above="@+id/idisiagreebtns">
+            <RelativeLayout android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ProgressBar android:layout_gravity="center" android:id="@+id/prgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true"/>
+                <WebView android:id="@+id/trcWeb" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_below="@+id/mmselfprogressBar1" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/idisiagreebtns" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_alignParentBottom="true">
+            <include layout="@layout/buttons_lay"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

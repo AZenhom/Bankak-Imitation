@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="80dp">
+    <HorizontalScrollView android:scrollbars="none" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:overScrollMode="never">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/bokWebLay" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/bok"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/bok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/boklgft"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/locLay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/locate"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/loc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loclgft"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/helpLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/contact"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contlgft"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/fbLay" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/fb"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/fb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fblgft"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/youtubeLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/footeryoutube"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/youtubetxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/youtube"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/survLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/survey"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/surv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/survlgft"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/lindkLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/linkedin"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/lindk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/linklgft"/>
+            </LinearLayout>
+            <LinearLayout android:textColor="@drawable/twitter" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/twittLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <ImageView android:gravity="center_horizontal" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/twitter"/>
+                <TextView android:textSize="13sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center_horizontal" android:id="@+id/twitt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/twitlgft"/>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

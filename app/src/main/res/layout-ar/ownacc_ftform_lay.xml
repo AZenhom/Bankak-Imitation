@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/drawerLayout" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ScrollView android:id="@+id/ScrollView01" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="10dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/header_lay"/>
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="10dp" android:weightSum="3">
+                    <TextView android:textSize="15sp" android:textStyle="normal" android:textColor="@color/textClr" android:gravity="right" android:layout_gravity="center_vertical" android:id="@+id/ownAccNo" android:background="@null" android:paddingLeft="4dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.2"/>
+                    <TextView android:textSize="16sp" android:textStyle="normal" android:textColor="@color/textClr" android:gravity="right" android:layout_gravity="center" android:id="@+id/ownAccNoTitle" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/accNoTxt" android:layout_weight="1.2"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtToAccSpinner" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/toAccSelHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <View android:background="@color/gray" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtOwnftMbno" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="@string/mbnoPrefx" android:hint="@string/mbnoHint" android:singleLine="true" android:maxLength="@integer/mbnoMaxLen" android:drawableLeft="@drawable/mobile" android:drawablePadding="10dp" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <View android:id="@+id/vewOwnSelctAccnt" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtOwnftAmt" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/amtHint" android:singleLine="true" android:maxLength="@integer/amtMaxLen" android:drawableLeft="@drawable/money" android:drawablePadding="10dp" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <View android:id="@+id/vewOwnAmount" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtRemarks" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/remarksHint" android:singleLine="true" android:maxLength="@integer/commentMaxLen" android:drawableLeft="@drawable/comment" android:drawablePadding="10dp" android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <include layout="@layout/buttons_lay"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="right" android:id="@+id/drawerPane" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/slidmenu_default_lay"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

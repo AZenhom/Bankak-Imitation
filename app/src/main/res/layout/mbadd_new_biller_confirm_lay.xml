@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/drawerLayout" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/header_lay"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TableLayout android:id="@+id/addBillerConfLay" android:background="@drawable/borders" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:shrinkColumns="*"/>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edBillerBenfiName" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/addBillerNameHint" android:singleLine="true" android:drawablePadding="10dp" android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <View android:id="@+id/vewbillrbenfName" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <include layout="@layout/buttons_lay"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="left" android:id="@+id/drawerPane" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/slidmenu_default_lay"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

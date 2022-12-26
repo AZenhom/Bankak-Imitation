@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableLayout android:id="@+id/othFtConfiTablay" android:background="@drawable/borders" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:shrinkColumns="*"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtAccSpinner" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/accSelHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:id="@+id/vewSelectAcnt" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llytftdirectMobile" android:background="@null" android:layout_width="match_parent" android:layout_height="65dp" android:layout_marginLeft="15dp" android:layout_marginRight="0dp">
+            <ImageView android:layout_gravity="center" android:id="@+id/imagvewftdirectMobile" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/newmobile"/>
+            <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/txtinputmobile" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtOthftMbno" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="@string/mbnoPrefx" android:hint="@string/mbnoHint" android:singleLine="true" android:maxLength="@integer/mbnoMaxLen" android:drawablePadding="10dp" android:inputType="number" android:importantForAutofill="noExcludeDescendants"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <View android:id="@+id/vewmobile" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/amountHint" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtOthftAmt" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/amtHint" android:singleLine="true" android:maxLength="@integer/amtMaxLen" android:drawableLeft="@drawable/money" android:drawablePadding="10dp" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:id="@+id/vewAmount" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/remarkTextInpt" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtRemarks" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/remarksHint" android:singleLine="true" android:maxLength="@integer/commentMaxLen" android:drawableLeft="@drawable/comment" android:drawablePadding="10dp" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <TextView android:textSize="16sp" android:textStyle="normal" android:textColor="@color/textClr" android:layout_gravity="center" android:id="@+id/trfTrcNote" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp"/>
+    <include layout="@layout/buttons_lay"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/mail_lay" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footerr">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/header_lay" android:background="@drawable/headerbg" android:layout_width="wrap_content" android:layout_height="320dp">
+                <ImageView android:textSize="18dp" android:gravity="center_horizontal" android:id="@+id/switch_lang" android:layout_width="30dp" android:layout_height="30dp" android:layout_margin="15dp" android:src="@drawable/eng_lang_icon" android:layout_alignParentRight="true"/>
+                <ImageView android:id="@+id/logo" android:layout_width="match_parent" android:layout_height="130dp" android:layout_marginTop="60dp" android:src="@drawable/white_logo_n"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/login_lay" android:background="@null" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="220dp" android:layout_marginRight="20dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/lay1" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="55dp">
+                    <com.google.android.material.textfield.TextInputLayout android:layout_gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="55dp">
+                        <androidx.appcompat.widget.AppCompatEditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:layout_gravity="center_vertical" android:id="@+id/edtmbCif" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/enter_id_txt" android:ems="10" android:singleLine="true" android:maxLength="@integer/mbnoMaxLen" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="60dp" android:src="@drawable/loginmanicon"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/lay2" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="10dp" android:layout_below="@+id/lay1">
+                    <com.google.android.material.textfield.TextInputLayout android:layout_gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="55dp">
+                        <androidx.appcompat.widget.AppCompatEditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:layout_gravity="center_vertical" android:id="@+id/edmbPwd" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/mbpwdHint" android:ems="10" android:singleLine="true" android:maxLength="@integer/pinpwdMaxLen" android:inputType="textPassword" android:importantForAutofill="no"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageView android:layout_gravity="center" android:id="@+id/mbPwdIcon" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="60dp" android:src="@drawable/loginpinicon"/>
+                </LinearLayout>
+                <Button android:textSize="19sp" android:textColor="@android:color/white" android:id="@+id/loginBtn" android:background="@drawable/button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:scaleType="fitCenter" android:text="@string/login" android:layout_below="@+id/lay2" android:textAllCaps="false"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/regis_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp" android:layout_below="@+id/login_lay">
+                <TextView android:textSize="16sp" android:textColor="@color/login_ftr_txtclr" android:id="@+id/newReg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="20dp" android:text="@string/newReg" android:layout_toLeftOf="@+id/forgotPass" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                <TextView android:textSize="16sp" android:textColor="@color/login_ftr_txtclr" android:id="@+id/forgotPass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:text="@string/cantSignin" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/share_qr_lay" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="45dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:layout_marginBottom="30dp" android:layout_below="@+id/regis_lay" android:layout_alignParentRight="true">
+                <TextView android:textSize="16sp" android:textColor="@color/login_ftr_txtclr" android:gravity="center" android:id="@+id/switRec" android:layout_width="wrap_content" android:layout_height="35dp" android:layout_marginRight="10dp" android:text="Share your"/>
+                <ImageView android:gravity="center_vertical" android:background="@null" android:paddingTop="2dp" android:layout_width="40dp" android:layout_height="36dp" android:src="@drawable/slidscanandpay" android:scaleType="fitCenter"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@+id/footerr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include layout="@layout/socialmedia_lay"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/toolbarmain" android:background="@drawable/headerbg" android:layout_width="wrap_content" android:layout_height="60dp">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="60dp" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/menuIcon" android:background="@null" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_drawer" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/headerLogo" android:background="@null" android:padding="5dp" android:visibility="visible" android:layout_width="110dp" android:layout_height="80dp" android:src="@drawable/ic_bnakak_logo_02" android:scaleType="fitXY" android:layout_centerHorizontal="true"/>
+            <ImageView android:id="@+id/info" android:visibility="visible" android:clickable="false" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginLeft="5dp" android:layout_marginRight="10dp" android:src="@drawable/info" android:scaleType="fitCenter" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/switToAcc" android:visibility="gone" android:clickable="true" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="10dp" android:src="@drawable/switchtoacc" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <ImageButton android:id="@+id/out" android:background="@null" android:clickable="true" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginRight="10dp" android:src="@drawable/logout_icon" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

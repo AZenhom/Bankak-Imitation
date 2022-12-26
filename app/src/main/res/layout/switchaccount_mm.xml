@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llytMBSwitch" android:background="@color/screenbg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="60dp">
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20dp">
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_horizontal" android:id="@+id/cusProfilePic" android:layout_width="100dp" android:layout_height="100dp" android:layout_margin="10dp" android:src="@drawable/myprofile" app:civ_border_color="#ffffff" app:civ_border_width="5dp"/>
+                <TextView android:textSize="18sp" android:gravity="center" android:id="@+id/txtvewmmswitchheader" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="10dp" android:layout_marginRight="25dp" android:layout_marginBottom="10dp" android:text="@string/mmswitchacnttxt"/>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mbLoginFromlay" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@null" android:layout_width="match_parent" android:layout_height="55dp">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="55dp">
+                            <androidx.appcompat.widget.AppCompatEditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:layout_gravity="center_vertical" android:id="@+id/edtmmmbno" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mbnoPrefx" android:hint="@string/mbnoHint" android:ems="10" android:singleLine="true" android:maxLength="@integer/mbnoMaxLen" android:inputType="number">
+                                <requestFocus/>
+                            </androidx.appcompat.widget.AppCompatEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="60dp" android:src="@drawable/newmobile"/>
+                    </LinearLayout>
+                    <View android:id="@+id/vewMMLoginMobile" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@null" android:layout_width="match_parent" android:layout_height="55dp">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="55dp">
+                            <androidx.appcompat.widget.AppCompatEditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:layout_gravity="center_vertical" android:id="@+id/edmmPwd" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/mmpwdHint" android:ems="10" android:singleLine="true" android:maxLength="@integer/pinpwdMaxLen" android:inputType="numberPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView android:layout_gravity="center" android:id="@+id/mmPwdIcon" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="60dp" android:src="@drawable/loginpinicon"/>
+                    </LinearLayout>
+                    <View android:id="@+id/vewMMLoginPwd" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <Button android:textSize="19sp" android:textColor="@android:color/white" android:id="@+id/loginBtn" android:background="@drawable/button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/appforrmpadding_val" android:layout_marginTop="30dp" android:layout_marginRight="@dimen/appforrmpadding_val" android:scaleType="fitCenter" android:text="@string/login" android:onClick="true" android:textAllCaps="false"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

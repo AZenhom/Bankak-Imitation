@@ -27,7 +27,7 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
 
 
     private lateinit var loadingDialog: LoaderDialogFragment
-    var doubleBackToExitPressedOnce = true
+    var backPressedEnabled = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -118,15 +118,8 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
     protected open val onBackPressedCallback: OnBackPressedCallback =
         object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (doubleBackToExitPressedOnce)
+                if (backPressedEnabled)
                     finish()
-                else {
-                    doubleBackToExitPressedOnce = true
-                    Toasty.info(this@BaseActivity, getString(R.string.click_twice)).show()
-                    Handler(Looper.getMainLooper()).postDelayed({
-                        doubleBackToExitPressedOnce = false
-                    }, 2000)
-                }
             }
         }
 

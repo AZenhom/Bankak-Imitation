@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:duration="100" android:drawable="@drawable/sucess"/>
+    <item android:duration="100" android:drawable="@drawable/sucess1"/>
+    <item android:duration="100" android:drawable="@drawable/sucess2"/>
+    <item android:duration="100" android:drawable="@drawable/sucess3"/>
+    <item android:duration="100" android:drawable="@drawable/sucess4"/>
+    <item android:duration="100" android:drawable="@drawable/sucess5"/>
+    <item android:duration="100" android:drawable="@drawable/sucess6"/>
+    <item android:duration="100" android:drawable="@drawable/sucess7"/>
+    <item android:duration="100" android:drawable="@drawable/sucess8"/>
+</animation-list>

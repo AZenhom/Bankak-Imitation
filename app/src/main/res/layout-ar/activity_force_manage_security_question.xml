@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/header_layout" layout="@layout/header_center_force_lay"/>
+    <ScrollView android:id="@+id/ScrollView01" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20dp" android:layout_below="@+id/header_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtQuesOneSpnr" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/selQuesHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vewQuesOne" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/ansOne" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/mbansHint" android:maxLength="@integer/secAnsMaxLen" android:drawableLeft="@drawable/answr_icon" android:drawablePadding="10dp" android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vwansOne" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtQuesTwoSpnr" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/selQuesHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vewQuesTwo" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/ansTwo" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/mbansHint" android:maxLength="@integer/secAnsMaxLen" android:drawableLeft="@drawable/answr_icon" android:drawablePadding="10dp" android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vwansTwo" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtQuesThreeSpnr" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/selQuesHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vewQuesThree" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/ansThree" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/mbansHint" android:maxLength="@integer/secAnsMaxLen" android:drawableLeft="@drawable/answr_icon" android:drawablePadding="10dp" android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vwansThree" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtQuesFourSpnr" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/selQuesHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vewQuesFour" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/ansFour" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/mbansHint" android:maxLength="@integer/secAnsMaxLen" android:drawableLeft="@drawable/answr_icon" android:drawablePadding="10dp" android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vwansFour" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtQuesFiveSpnr" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/selQuesHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vewQuesFive" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/ansFive" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/mbansHint" android:maxLength="@integer/secAnsMaxLen" android:drawableLeft="@drawable/answr_icon" android:drawablePadding="10dp" android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <View android:id="@+id/vwansFive" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            </LinearLayout>
+            <include layout="@layout/buttons_lay"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

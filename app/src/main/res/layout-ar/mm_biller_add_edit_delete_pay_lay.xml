@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/drawerLayout" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/header_lay"/>
+        <include layout="@layout/tabs"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/mmaddBillLay" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                    <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtSelMainBiller" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/mainBillerHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/addBillerSuForm" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <View android:id="@+id/vewmainbillr" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                            <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtSelSubMainBiller" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/subBillerHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <View android:id="@+id/vewsubbillr" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                            <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/editBillNoTxtINptLay" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/editBillNo" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:singleLine="true" android:maxLength="20" android:drawableLeft="@drawable/manicon" android:drawablePadding="10dp" android:inputType="number"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <View android:id="@+id/vewmmbillrno" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                            <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtmmBenfNickName" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/nickNameHint" android:singleLine="true" android:maxLength="@integer/nameMaxLen" android:drawableLeft="@drawable/manicon" android:drawablePadding="10dp" android:inputType="text"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <View android:id="@+id/vewmmbillrnickname" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <include android:id="@+id/mmaddBillBtnLay" android:visibility="gone" layout="@layout/buttons_lay"/>
+                </LinearLayout>
+                <TextView android:textSize="17sp" android:textColor="@color/titleClr" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/billerOrBefWrrmSg" android:background="@drawable/borders" android:paddingLeft="5dp" android:paddingTop="40dp" android:paddingBottom="40dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/data_empty_Err"/>
+                <TableLayout android:id="@+id/mmbillBenfTabLay" android:background="@null" android:padding="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:shrinkColumns="*"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="right" android:id="@+id/drawerPane" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/slidmenu_default_lay"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

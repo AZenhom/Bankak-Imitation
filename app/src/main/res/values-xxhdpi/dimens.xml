@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="qrScanerhewe">40dp</dimen>
+    <dimen name="qrscan_height">300dp</dimen>
+    <dimen name="qrscan_width">300dp</dimen>
+    <dimen name="qrscanner">350dp</dimen>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200" android:drawable="@drawable/loggingin1"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin2"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin3"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin4"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin5"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin6"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin7"/>
+    <item android:duration="200" android:drawable="@drawable/loggingin8"/>
+</animation-list>

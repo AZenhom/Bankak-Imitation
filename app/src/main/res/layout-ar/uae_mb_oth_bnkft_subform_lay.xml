@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableLayout android:id="@+id/othFtConfiTablay" android:background="@drawable/borders" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:shrinkColumns="*"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtBenIdenF" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="Select Bank Identifier" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtAccSpinner" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/accSelHint" android:editable="false" android:drawableLeft="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/inputMObile" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtOthftMbno" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/mbnoHint" android:singleLine="true" android:maxLength="@integer/mbnoMaxLen" android:drawableLeft="@drawable/mobile" android:drawablePadding="10dp" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:id="@+id/viewmbl" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/inputBeneficary" android:paddingTop="4dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtothrftbenf" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/benfName" android:singleLine="true" android:maxLength="@integer/nameMaxLen" android:drawableRight="@drawable/manicon" android:drawablePadding="10dp" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:id="@+id/viewbenf" android:background="@color/gray" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtOthftAmt" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="" android:hint="@string/amtHint" android:singleLine="true" android:maxLength="@integer/amtMaxLen" android:drawablePadding="10dp" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/addrsTxtInput" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtAddress" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="Address" android:singleLine="true" android:maxLength="@integer/commentMaxLen" android:drawableLeft="@drawable/address" android:drawablePadding="10dp" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:id="@+id/remarkTextInpt" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtRemarks" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/remarksHint" android:singleLine="true" android:maxLength="@integer/commentMaxLen" android:drawableLeft="@drawable/comment" android:drawablePadding="10dp" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <include layout="@layout/uae_buttons_lay"/>
+</LinearLayout>

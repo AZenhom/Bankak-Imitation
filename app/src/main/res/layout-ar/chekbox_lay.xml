@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/formBtnLay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+    <LinearLayout android:orientation="horizontal" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:textColor="@color/textClr" android:id="@+id/trcCheck" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:checked="false" android:button="@null" android:text="@string/regTC" android:drawableRight="@drawable/checkboxbg" android:drawablePadding="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

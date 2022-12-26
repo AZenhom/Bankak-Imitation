@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cardmanagement_list">
+        <item>تفعيل بطاقة الصراف الآلي</item>
+        <item>طلب بطاقة صراف آلي جديدة</item>
+        <item>طلب بطاقة صراف آلي إضافية</item>
+    </array>
+    <array name="channel_list">
+        <item>التطبيق</item>
+        <item>USSD</item>
+    </array>
+    <array name="drawer_list">
+        <item>القائمة الرئيسية</item>
+        <item>تفاصيل الحساب</item>
+        <item>دفع الفواتير</item>
+        <item>تحويل الأموال</item>
+        <item>إدارة المستفيدين</item>
+        <item>سحب بدون بطاقة</item>
+        <item>‫بنكك‬PAY</item>
+        <item>الملف الشخصي</item>
+        <item>المعاملات السابقة</item>
+        <item>إدارة البطاقات</item>
+        <item>طلبات</item>
+        <item>أمر دفع دائم</item>
+        <item>طلب الودائع الأستثمارية</item>
+        <item>الضبط</item>
+        <item>خروج</item>
+    </array>
+    <array name="editbiller_confTitle">
+        <item>اللقب</item>
+        <item>الشركة</item>
+        <item>الرقم</item>
+    </array>
+    <array name="fcyFt_menus">
+        <item>استبدال العملات الأجنبية</item>
+        <item>من حسابي بالعملة الأجنبية إلى حسابي المميز</item>
+        <item>تحويل العملات الأجنبية</item>
+    </array>
+    <array name="ft_beneficiary_menus">
+        <item>تحويل لحسابات بنك الخرطوم</item>
+        <item>سحب بدون بطاقة</item>
+        <item>الدفع عبر الموبايل</item>
+        <item>فواتير</item>
+        <item>تحويل لبنك آخر (باستخدام رقم البطاقة)</item>
+        <item>تحويل العملات الأجنبية</item>
+    </array>
+    <array name="ft_menus">
+        <item>حساباتي</item>
+        <item>تحويل لحسابات بنك الخرطوم</item>
+        <item>الدفع عبر الموبايل</item>
+        <item>تحويل لبنك آخر (باستخدام رقم البطاقة)</item>
+    </array>
+    <array name="help_country">
+        <item>السودان</item>
+        <item>الإمارات العربية المتحدة</item>
+    </array>
+    <array name="help_serv">
+        <item>الموبايل المصرفي</item>
+        <item>الدفع عبر الموبايل</item>
+    </array>
+    <array name="help_servTypes">
+        <item>تسجيل جديد</item>
+        <item>إعادة تعيين كلمة المرور</item>
+        <item>إعادة ضبط الموبايل</item>
+        <item>أخرى</item>
+    </array>
+    <array name="help_serv_uae">
+        <item>الموبايل المصرفي</item>
+    </array>
+    <array name="home_menus">
+        <item>تفاصيل\n الحساب</item>
+        <item>دفع \nفواتير</item>
+        <item>تحويلات</item>
+        <item>سحب \n بدون بطاقة</item>
+        <item>‫بنكك‬PAY</item>
+        <item>طلب الودائع\n الأستثمارية</item>
+        <item>إدارة\n المستفيدين</item>
+        <item>المعاملات\n السابقة</item>
+        <item>إدارة البطاقات</item>
+        <item>طلبات</item>
+        <item>أمر دفع دائم</item>
+        <item>الضبط</item>
+        <item>التجارة الإلكترونية\n\n</item>
+        <item>خدمات العملات الأجنبية</item>
+    </array>
+    <array name="home_menuslv">
+        <item>تفاصيل\n الحساب</item>
+        <item>دفع \nفواتير</item>
+        <item>تحويلات</item>
+        <item>سحب \n بدون بطاقة</item>
+        <item>‫بنكك‬PAY</item>
+        <item>طلب الودائع\n الأستثمارية</item>
+        <item>إدارة\n المستفيدين</item>
+        <item>المعاملات\n السابقة</item>
+        <item>إدارة البطاقات</item>
+        <item>طلبات</item>
+        <item>أمر دفع دائم</item>
+        <item>الضبط</item>
+        <item>التجارة الإلكترونية\n\n</item>
+        <item>تحويل العملات الأجنبية</item>
+    </array>
+    <array name="logoutSumm_Titles">
+        <item>زمن الدخول</item>
+        <item>زمن الخروج</item>
+        <item>الفترة الزمنية</item>
+        <item>عدد المعاملات</item>
+        <item>المبلغ الكلي</item>
+    </array>
+    <array name="mbFrgPwd_list">
+        <item>إعادة تعيين كلمة المرور من خلال خدمة العملاء</item>
+        <item>إعادة تعيين كلمة المرور من خلال بطاقة الصراف الآلي</item>
+        <item>إعادة تعيين كلمة المرور من خلال المصادقة 2 عامل</item>
+    </array>
+    <array name="mbreqServ_list">
+        <item>طلب شهادة حساب مرجعية</item>
+        <item>طلب شهادة رصيد</item>
+        <item>طلب دفتر شيكات</item>
+    </array>
+    <array name="mm_addBenf_menus">
+        <item>تحويل بنكي</item>
+        <item>تحويل لحساب موبايل</item>
+        <item>فواتير</item>
+    </array>
+    <array name="mm_drawer_list">
+        <item>القائمة الرئيسية</item>
+        <item>حسابي</item>
+        <item>دفع فواتير</item>
+        <item>تحويل الأموال</item>
+        <item>إدارة المستفيدين</item>
+        <item>سحب بدون بطاقة</item>
+        <item>‫بنكك‬PAY</item>
+        <item>الملف الشخصي</item>
+        <item>رشح واكسب</item>
+        <item>الضبط</item>
+        <item>خروج</item>
+    </array>
+    <array name="mm_ftandBenf_menus">
+        <item>تحويل بنكي</item>
+        <item>تحويل لحساب موبايل</item>
+    </array>
+    <array name="mm_home_grid">
+        <item>حسابي</item>
+        <item>دفع فواتير</item>
+        <item>تحويلات</item>
+        <item>سحب بدون بطاقة</item>
+        <item>‫بنكك‬PAY</item>
+        <item>رشح واكسب</item>
+        <item>الضبط</item>
+        <item>إدارة\n المستفيدين</item>
+    </array>
+    <array name="mm_settings_list">
+        <item>حدود المعاملات</item>
+        <item>تغيير الرقم السري للموبايل</item>
+        <item>تغيير اللغة</item>
+        <item>التنبيه</item>
+        <item>رمز الدفع السريع</item>
+    </array>
+    <array name="mmeditbiller_confTitle">
+        <item>اللقب</item>
+        <item>الفاتورة</item>
+        <item>الرقم</item>
+    </array>
+    <array name="new_reg_country">
+        <item>السودان</item>
+        <item>الإمارات العربية المتحدة</item>
+    </array>
+    <array name="othFt_Confirm_title">
+        <item>رقم الحساب.</item>
+        <item>الإسم</item>
+        <item>نوع الحساب</item>
+        <item>الفرع</item>
+    </array>
+    <array name="othP2p_Confirm_title">
+        <item>رقم البطاقة</item>
+        <item>الإسم</item>
+        <item>الموبايل</item>
+        <item>البنك</item>
+    </array>
+    <array name="settings_list">
+        <item>حدود المعاملات</item>
+        <item>تغيير كلمة المرور</item>
+        <item>تغيير اللغة</item>
+        <item>التنبيه</item>
+        <item>رمز الدفع السريع</item>
+        <item>إدارة أسئلة الأمان</item>
+        <item>الحساب الأساسي</item>
+        <item>تسجيل عميل بخدمة الدفع عبر الموبايل</item>
+    </array>
+    <array name="standingOrder_SubList">
+        <item>أمر دفع مستديم</item>
+        <item>ادارة أمر الدفع المستديم</item>
+    </array>
+    <array name="standingOrder_list">
+        <item>أمر دفع دائم</item>
+        <item>حساب المسح</item>
+    </array>
+    <array name="stmt_pdf_Header">
+        <item>الرمز التعريفي</item>
+        <item>رقم الحساب</item>
+        <item>اسم العميل</item>
+        <item>نوع الحساب</item>
+        <item>العملة</item>
+        <item>تاريخ الاصدار</item>
+        <item>كشف حساب من</item>
+    </array>
+    <array name="stmt_pdf_HeaderTitles">
+        <item>تاريخ المعاملة</item>
+        <item>الوصف</item>
+        <item>خصم</item>
+        <item>اضافة</item>
+        <item>الرصيد</item>
+    </array>
+    <array name="uae_drawer_list">
+        <item>القائمة الرئيسية</item>
+        <item>تفاصيل الحساب</item>
+        <item>تحويل الأموال</item>
+        <item>إضافة مستفيد</item>
+        <item>الملف الشخصي</item>
+        <item>الدفعيات السابقة</item>
+        <item>الضبط</item>
+        <item>خروج</item>
+    </array>
+    <array name="uae_ft_beneficiary_menus">
+        <item>حسابات اخرى</item>
+        <item>Other Bank</item>
+        <item>حسابات اخرى</item>
+    </array>
+    <array name="uae_ft_menus">
+        <item>حساباتي</item>
+        <item>حسابات اخرى</item>
+        <item>Other Bank</item>
+        <item>حسابات اخرى</item>
+    </array>
+    <array name="uae_home_menus">
+        <item>تفاصيل\n الحساب</item>
+        <item>تحويلات</item>
+        <item>إضافة مستفيد</item>
+        <item>الدفعيات\n السابقة</item>
+        <item>الضبط</item>
+    </array>
+    <array name="uae_settings_list">
+        <item>تغيير الرقم السري</item>
+        <item>التنبيه</item>
+        <item>Manage Security Questions</item>
+    </array>
+    <array name="uae_view_stmt_titles">
+        <item>اخر خمسه معاملات</item>
+        <item>هذا الاسبوع</item>
+        <item>هذا الشهر</item>
+        <item>آخر 3 شهور</item>
+        <item>تحديد التاريخ</item>
+    </array>
+    <array name="view_stmt_titles">
+        <item>آخر 5 معاملات</item>
+        <item>آخر 7 أيام</item>
+        <item>آخر 30 يوم</item>
+        <item>آخر 3 شهور</item>
+        <item>تحديد التاريخ</item>
+    </array>
+</resources>

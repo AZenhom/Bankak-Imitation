@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_margin="1dp" style="@style/FooterBar">
+    <TextView android:textSize="12sp" android:textColor="@color/footertxtclr" android:gravity="center_horizontal" android:id="@+id/footerr" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/footer" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

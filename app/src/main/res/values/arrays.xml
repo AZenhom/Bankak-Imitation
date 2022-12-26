@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cardmanagement_list">
+        <item>Card Activation</item>
+        <item>New ATM Card Request</item>
+        <item>New Supplementary Card Request</item>
+    </array>
+    <array name="channel_list">
+        <item>APP</item>
+        <item>USSD</item>
+    </array>
+    <array name="creat_Mang_stndOrder_MenuList">
+        <item>Funds Transfer</item>
+        <item>Bill Payments</item>
+    </array>
+    <array name="drawer_list">
+        <item>Home</item>
+        <item>Account Summary</item>
+        <item>Bill Payments</item>
+        <item>Funds Transfer</item>
+        <item>Manage Beneficiary</item>
+        <item>Cardless Withdrawal</item>
+        <item>‫بنكك‬PAY</item>
+        <item>My Profile</item>
+        <item>Transaction History</item>
+        <item>Card Management</item>
+        <item>Requests</item>
+        <item>Standing Order</item>
+        <item>Apply for Fixed Deposit</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </array>
+    <array name="editbiller_confTitle">
+        <item>Nick Name</item>
+        <item>Company</item>
+        <item>Number</item>
+    </array>
+    <array name="fcyFt_menus">
+        <item>Foreign Currency Exchange</item>
+        <item>Own To Premium Transfer</item>
+        <item>Foreign Currency Other Transfer</item>
+    </array>
+    <array name="ft_beneficiary_menus">
+        <item>Other BOK Account</item>
+        <item>Cardless Withdrawal</item>
+        <item>Mobile Money</item>
+        <item>Billers</item>
+        <item>Other Bank Account (By Card)</item>
+        <item>Foreign Currency Other Transfer</item>
+    </array>
+    <array name="ft_menus">
+        <item>Own Account</item>
+        <item>Other BOK Account</item>
+        <item>Mobile Money</item>
+        <item>Other Bank Account (By Card)</item>
+    </array>
+    <array name="help_country">
+        <item>Sudan</item>
+        <item>UAE</item>
+    </array>
+    <array name="help_serv">
+        <item>Mobile Banking</item>
+        <item>Mobile Money</item>
+    </array>
+    <array name="help_servTypes">
+        <item>New Subscription</item>
+        <item>Reset my password</item>
+        <item>Reset my device</item>
+        <item>Others</item>
+    </array>
+    <array name="help_serv_uae">
+        <item>Mobile Banking</item>
+    </array>
+    <array name="home_menus">
+        <item>Account\nSummary</item>
+        <item>Bill\nPayments</item>
+        <item>Funds\nTransfer</item>
+        <item>Cardless\nWithdrawal</item>
+        <item>‫بنكك‬PAY</item>
+        <item>Apply for\nFixed Deposit</item>
+        <item>Manage\nBeneficiary</item>
+        <item>Transaction\nHistory</item>
+        <item>Card\nManagement</item>
+        <item>Requests\n\n</item>
+        <item>Standing\nOrder</item>
+        <item>Settings\n\n</item>
+        <item>E-Commerce\n\n</item>
+        <item>Foreign Currency Services</item>
+    </array>
+    <array name="home_menuslv">
+        <item>Account\nSummary</item>
+        <item>Bill\nPayments</item>
+        <item>Funds\nTransfer</item>
+        <item>Cardless\nWithdrawal</item>
+        <item>‫بنكك‬PAY</item>
+        <item>Apply for\nFixed Deposit</item>
+        <item>Manage\nBeneficiary</item>
+        <item>Transaction\nHistory</item>
+        <item>Card\nManagement</item>
+        <item>Requests\n\n</item>
+        <item>Standing\nOrder</item>
+        <item>Settings\n\n</item>
+        <item>E-Commerce\n\n</item>
+        <item>FCY Exchange</item>
+    </array>
+    <array name="logoutSumm_Titles">
+        <item>Login time</item>
+        <item>Logout time</item>
+        <item>Total Duration</item>
+        <item>Number of Transactions</item>
+        <item>Total Amount</item>
+    </array>
+    <array name="mbFrgPwd_list">
+        <item>Reset Password through customer care</item>
+        <item>Reset Password through ATM Card</item>
+        <item>Reset Password through 2 factor authentication</item>
+    </array>
+    <array name="mbreqServ_list">
+        <item>Account Certificate Request</item>
+        <item>Balance Certificate Request</item>
+        <item>Cheque Book Request</item>
+    </array>
+    <array name="mm_addBenf_menus">
+        <item>Bank Transfer</item>
+        <item>Other Mobile</item>
+        <item>Billers</item>
+    </array>
+    <array name="mm_drawer_list">
+        <item>Home</item>
+        <item>My Account</item>
+        <item>Bill Payments</item>
+        <item>Funds Transfer</item>
+        <item>Manage Beneficiary</item>
+        <item>Cardless Withdrawal</item>
+        <item>‫بنكك‬PAY</item>
+        <item>My Profile</item>
+        <item>Refer &amp; Earn</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </array>
+    <array name="mm_ftandBenf_menus">
+        <item>Bank Transfer</item>
+        <item>Other Mobile</item>
+    </array>
+    <array name="mm_home_grid">
+        <item>My Account</item>
+        <item>Bill\nPayments</item>
+        <item>Funds\nTransfer</item>
+        <item>Cardless\nWithdrawal</item>
+        <item>‫بنكك‬PAY</item>
+        <item>Refer &amp; Earn</item>
+        <item>Settings\n</item>
+        <item>Manage\nBeneficiary</item>
+    </array>
+    <array name="mm_settings_list">
+        <item>Transaction Limits</item>
+        <item>Change Mobile PIN</item>
+        <item>Change Language</item>
+        <item>Notification</item>
+        <item>Your QR</item>
+    </array>
+    <array name="mmeditbiller_confTitle">
+        <item>Nick Name</item>
+        <item>Biller</item>
+        <item>Number</item>
+    </array>
+    <array name="new_reg_country">
+        <item>SUDAN</item>
+        <item>UAE</item>
+    </array>
+    <array name="othFt_Confirm_title">
+        <item>Account no.</item>
+        <item>Name</item>
+        <item>Account type</item>
+        <item>Branch</item>
+    </array>
+    <array name="othP2p_Confirm_title">
+        <item>Card no.</item>
+        <item>Name</item>
+        <item>Mobile</item>
+        <item>Bank</item>
+    </array>
+    <array name="settings_list">
+        <item>Transaction Limits</item>
+        <item>Change Password</item>
+        <item>Change Language</item>
+        <item>Notification</item>
+        <item>Your QR</item>
+        <item>Manage Security Questions</item>
+        <item>Default Account</item>
+        <item>Register MM Customer</item>
+    </array>
+    <array name="standingOrder_SubList">
+        <item>Create Standing Order</item>
+        <item>Manage Standing Order</item>
+    </array>
+    <array name="standingOrder_list">
+        <item>Standing Order</item>
+        <item>Sweep Account</item>
+    </array>
+    <array name="stmt_pdf_Header">
+        <item>CIF No</item>
+        <item>Account No</item>
+        <item>Account Name</item>
+        <item>Account Type</item>
+        <item>Currency</item>
+        <item>Issue Date</item>
+        <item>Statement From</item>
+    </array>
+    <array name="stmt_pdf_HeaderTitles">
+        <item>Transaction Date</item>
+        <item>Description</item>
+        <item>Debit</item>
+        <item>Credit</item>
+        <item>Balance</item>
+    </array>
+    <array name="uae_drawer_list">
+        <item>Home</item>
+        <item>Account Summary</item>
+        <item>Funds Transfer</item>
+        <item>Manage Beneficiary</item>
+        <item>My Profile</item>
+        <item>Transaction History</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </array>
+    <array name="uae_ft_beneficiary_menus">
+        <item>Other BOKI Account</item>
+        <item>Other Bank Account</item>
+    </array>
+    <array name="uae_ft_menus">
+        <item>Own Account</item>
+        <item>Other BOKI Account</item>
+        <item>Other Bank Account</item>
+    </array>
+    <array name="uae_home_menus">
+        <item>Account\nSummary</item>
+        <item>Funds\nTransfer</item>
+        <item>Manage\nBeneficiary</item>
+        <item>Transaction\nHistory</item>
+        <item>Settings\n\n</item>
+    </array>
+    <array name="uae_settings_list">
+        <item>Change Password</item>
+        <item>Notification</item>
+        <item>Manage Security Questions</item>
+    </array>
+    <array name="uae_view_stmt_titles">
+        <item>Last Five</item>
+        <item>This Week</item>
+        <item>This Month</item>
+        <item>Last 3 Months</item>
+        <item>By Date</item>
+    </array>
+    <array name="view_stmt_titles">
+        <item>Last 5 Trx</item>
+        <item>Last 7 Days</item>
+        <item>Last 30 Days</item>
+        <item>Last 3 Months</item>
+        <item>By Date</item>
+    </array>
+</resources>

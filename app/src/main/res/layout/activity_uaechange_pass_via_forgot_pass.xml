@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/drawerLayout" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/uae_header_lay"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                    <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtFrcCuPwd" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/cuPwd" android:singleLine="true" android:maxLength="@integer/pinpwdMaxLen" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@%!#$&amp;~" android:drawableRight="@drawable/pinicon" android:drawablePadding="10dp" android:inputType="textPassword"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <View android:id="@+id/vewCurrentPwd" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@null" android:layout_width="match_parent" android:layout_height="55dp">
+                        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="45dp">
+                            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtFrcNewPwd" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/newPwd" android:singleLine="true" android:maxLength="@integer/pinpwdMaxLen" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@%!#$&amp;~" android:inputType="textPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView android:layout_gravity="center" android:id="@+id/mbPwdIcon" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="60dp" android:src="@drawable/loginpinicon"/>
+                    </LinearLayout>
+                    <View android:id="@+id/vewNewPwd" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@null" android:layout_width="match_parent" android:layout_height="55dp">
+                        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="45dp">
+                            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtFrcConfNewPwd" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/confnewPwd" android:singleLine="true" android:maxLength="@integer/pinpwdMaxLen" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@%!#$&amp;~" android:inputType="textPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView android:layout_gravity="center" android:id="@+id/mbPwdIcon1" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="60dp" android:src="@drawable/loginpinicon"/>
+                    </LinearLayout>
+                    <View android:id="@+id/vewConfirmNewPwd" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                        <ProgressBar android:id="@+id/progressBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="20dp" android:progress="0" android:indeterminate="false" android:minHeight="20dp" android:layout_weight="1" style="?android:attr/progressBarStyleHorizontal"/>
+                        <TextView android:gravity="center_horizontal" android:id="@+id/password_strength" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weak"/>
+                    </LinearLayout>
+                    <TextView android:textColor="#000" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/pass_mush_have"/>
+                    <TextView android:gravity="center_vertical" android:id="@+id/check_pass_length" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/eight_or_more_chr" android:drawableLeft="@drawable/password_def" android:drawablePadding="2dp"/>
+                    <TextView android:gravity="center_vertical" android:id="@+id/check_pass_upperlower" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:text="@string/upr_lowr_ltr" android:drawableLeft="@drawable/password_def" android:drawablePadding="2dp"/>
+                    <TextView android:gravity="center_vertical" android:id="@+id/check_pass_num" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:text="@string/atleast_one_num" android:drawableLeft="@drawable/password_def" android:drawablePadding="2dp"/>
+                    <TextView android:gravity="center_vertical" android:id="@+id/check_pass_spec" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:text="@string/one_special_char" android:drawableLeft="@drawable/password_def" android:drawablePadding="2dp"/>
+                    <TextView android:id="@+id/login_instructions" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/avoid_easy_pass"/>
+                </LinearLayout>
+                <include layout="@layout/uae_buttons_lay"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

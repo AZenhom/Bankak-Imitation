@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/screenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="110dp">
+            <include layout="@layout/header_lay"/>
+            <include layout="@layout/tabs"/>
+            <ScrollView android:id="@+id/ScrollView01" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/loginform_lay"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <View android:id="@+id/view" android:background="@drawable/headerbg" android:layout_width="match_parent" android:layout_height="2dp" android:layout_above="@+id/footerr"/>
+        <RelativeLayout android:id="@+id/footerr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include layout="@layout/socialmedia_lay"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" card_view:cardCornerRadius="2dp" card_view:contentPaddingBottom="10dp" card_view:contentPaddingTop="10dp">
+        <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/mmMiniFtTypeIcon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginRight="5dp" android:src="@drawable/sdgcr" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/app_name"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_toLeftOf="@+id/mmMiniFtTypeIcon" android:layout_centerVertical="true">
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/minrow" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_weight="1.9">
+                        <TextView android:textSize="15sp" android:textColor="@color/drclr" android:gravity="center" android:id="@+id/ftPayAmt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SDG. 23423"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/dateclr" android:gravity="center" android:id="@+id/ftPayType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="BILL PAYMRNT"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:background="@null" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:weightSum="0.1">
+                        <TextView android:textSize="15sp" android:textColor="@color/benfName" android:gravity="right" android:layout_gravity="right" android:id="@+id/cusPayeeID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="249900528643"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/benfName" android:gravity="right" android:layout_gravity="right" android:id="@+id/miniDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/decrclr" android:gravity="center" android:layout_gravity="center" android:id="@+id/staus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="COMPLETED"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/successscreenbg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@+id/headerTitle" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_above="@+id/exit_Btn">
+        <ImageView android:id="@+id/logOutIcon" android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/logoutres" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:contentDescription="@string/app_name"/>
+        <TextView android:textSize="18sp" android:textColor="@color/white" android:id="@+id/logoutTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout_Title" android:layout_below="@+id/logOutIcon" android:layout_centerHorizontal="true"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_below="@+id/logoutTitle">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/logoutSubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout_SubTitle" android:layout_below="@+id/logOutIcon"/>
+                <TableLayout android:id="@+id/logout_SummeryTablay" android:background="@null" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="6dp" android:shrinkColumns="*"/>
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/logoutMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginRight="30dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <Button android:textColor="@color/white" android:id="@+id/exit_Btn" android:background="@drawable/sucessbutton" android:layout_width="100dp" android:layout_height="wrap_content" android:scaleType="fitCenter" android:text="@string/exit_Str" android:layout_above="@+id/footLay" android:layout_centerHorizontal="true" android:onClick="true" android:textAllCaps="false"/>
+    <RelativeLayout android:id="@+id/footLay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <include layout="@layout/footerlay_withoutbg"/>
+    </RelativeLayout>
+</RelativeLayout>

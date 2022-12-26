@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" card_view:cardCornerRadius="2dp" card_view:contentPaddingBottom="10dp" card_view:contentPaddingTop="10dp">
+        <RelativeLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/benfOrBilleRow" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2" android:layout_alignParentTop="true">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/benfOrBilleIcon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="4dp" android:layout_weight="0.05" android:contentDescription="@string/app_name"/>
+                <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1.9">
+                    <TextView android:textSize="15dp" android:textStyle="normal" android:textColor="@color/benfName" android:id="@+id/benefBillerName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                    <TextView android:textSize="12dp" android:textColor="@color/benfsubValue" android:id="@+id/benefBillerAccNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="MTNPrepaidService  MTNPrepaidServic eBiller no. 922838624" android:layout_below="@+id/benefBillerName" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="4dp" android:layout_marginRight="10dp" android:layout_marginBottom="4dp" android:layout_weight="0.05">
+                    <ImageView android:gravity="center" android:id="@+id/payIcon" android:padding="10dp" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="4dp" android:src="@drawable/payicon" android:scaleType="fitCenter" android:layout_weight="0.05" android:contentDescription="@string/app_name"/>
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/txtvewServiceName" android:layout_width="60dp" android:layout_height="wrap_content" android:text="@string/transfer" android:layout_below="@+id/payIcon"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@+id/rowView" android:background="@color/gray" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="5dp" android:layout_below="@+id/benfOrBilleRow"/>
+            <RelativeLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/rowView" android:layout_centerVertical="true">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/editNickNameLay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_toLeftOf="@+id/view" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="10dp" android:src="@drawable/edit" android:layout_marginStart="10dp"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/titleClr" android:gravity="left" android:id="@+id/editBenfBilleNameTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/editNickNameBtn"/>
+                </LinearLayout>
+                <View android:id="@+id/view" android:background="@drawable/grayviewver" android:layout_width="4dp" android:layout_height="30dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/deleBenfBillerLay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_toRightOf="@+id/view" android:layout_centerVertical="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="10dp" android:src="@drawable/delete" android:layout_marginStart="10dp"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/titleClr" android:gravity="left" android:id="@+id/deleBenfBillerTxt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/delete"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

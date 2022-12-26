@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/toolbarlayout"/>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/homeHeader" android:background="@drawable/sub_hdr_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="40dp">
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/homeOut" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="15sp" android:textColor="@color/titleClr" android:gravity="center" android:id="@+id/homeCuName" android:background="@null" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="asdasdas"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/header_titleLay" android:background="@drawable/sub_hdr_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="55dp">
+        <ImageButton android:id="@+id/backmen" android:background="@null" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@drawable/back" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <ImageView android:gravity="center" android:id="@+id/scanPayheader" android:background="@null" android:padding="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="45dp" android:src="@drawable/scanpayheader" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/titleClr" android:gravity="center" android:id="@+id/servTitle" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="25dp" android:text="" android:layout_toLeftOf="@+id/backmen" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

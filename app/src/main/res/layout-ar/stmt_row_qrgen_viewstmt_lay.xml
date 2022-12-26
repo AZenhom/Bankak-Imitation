@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/qrcodeGenLay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_toLeftOf="@+id/qrView">
+        <TextView android:textSize="11sp" android:textColor="@color/titleClr" android:gravity="center" android:id="@+id/qrcodeGenTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/qrcode"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/qrIcon" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="10dp" android:src="@drawable/qr" android:layout_marginEnd="10dp"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/tdIcon" android:visibility="gone" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginRight="10dp" android:src="@drawable/term_depo_dtl" android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+    <View android:layout_gravity="center" android:id="@+id/qrView" android:background="@drawable/grayviewver" android:layout_width="3dp" android:layout_height="25dp" android:layout_margin="3dp" android:layout_centerHorizontal="true"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/viewStmtLay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_toRightOf="@+id/qrView">
+        <TextView android:textSize="11sp" android:textColor="@color/titleClr" android:gravity="center" android:id="@+id/viewStmtTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/viewStmt"/>
+        <ImageView android:gravity="center" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="10dp" android:src="@drawable/statement" android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</LinearLayout>

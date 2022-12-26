@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/accOrCifChkLay" android:background="@drawable/borders" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <ImageView android:id="@+id/qrCodeImage" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="15dp" android:src="@drawable/slidscanandpay" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/cifTxtInputlay" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/qrCodeImage" android:layout_centerVertical="true">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/edtAccNoOrCif" android:background="@null" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:ems="10" android:singleLine="true" android:maxLength="@integer/uaeAccNoMaxLen" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/cifAccChkCifLay" android:background="@drawable/borders" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:gravity="center" android:id="@+id/edtChkAccSpinner" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/accSelHint" android:editable="false" android:drawableRight="@drawable/dropdownarr" android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <Button android:textColor="@color/white" android:layout_gravity="right" android:id="@+id/check_Btn" android:background="@drawable/button" android:visibility="gone" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:scaleType="fitCenter" android:text="@string/submit" android:onClick="true" android:textAllCaps="false"/>
+</LinearLayout>
