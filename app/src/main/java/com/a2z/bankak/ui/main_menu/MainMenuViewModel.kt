@@ -14,7 +14,7 @@ import javax.inject.Inject
 class MainMenuViewModel @Inject constructor(
 ) : BaseViewModel() {
 
-    fun getMenuItem(context: Context): List<MainMenuAdapter.MainMenuItem> {
+    fun getMenuItems(context: Context): List<MainMenuAdapter.MainMenuItem> {
         val menuItems = mutableListOf<MainMenuAdapter.MainMenuItem>()
         val textArray = context.resources.getStringArray(R.array.home_menuslv)
         val resourcesArray = listOf(

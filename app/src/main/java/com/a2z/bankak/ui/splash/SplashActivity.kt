@@ -42,6 +42,7 @@ class SplashActivity : BaseActivity<NewLayoutSplashActivityBinding, SplashViewMo
 
     private fun checkNavigation() {
         startActivity(LoginActivity.getIntent(this))
+        finish()
     }
 
     private inner class GifRequestListener : RequestListener<GifDrawable> {

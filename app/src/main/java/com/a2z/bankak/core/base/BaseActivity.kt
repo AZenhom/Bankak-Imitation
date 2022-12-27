@@ -123,6 +123,10 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
             }
         }
 
+    protected fun registerViewOnBackPressed(view: View) {
+        view.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+    }
+
     protected fun registerToolBarOnBackPressed(toolbar: MaterialToolbar) {
         toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }

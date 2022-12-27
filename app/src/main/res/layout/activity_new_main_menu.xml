@@ -58,14 +58,4 @@
             tools:listitem="@layout/new_item_main_menu" />
 
     </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/drawerPane"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:background="@color/white">
-
-        <include layout="@layout/slidmenu_default_lay" />
-    </RelativeLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

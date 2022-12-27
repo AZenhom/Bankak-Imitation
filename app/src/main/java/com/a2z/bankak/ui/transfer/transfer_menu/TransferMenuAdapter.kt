@@ -1,4 +1,4 @@
-package com.a2z.bankak.ui.main_menu
+package com.a2z.bankak.ui.transfer.transfer_menu
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,17 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.a2z.bankak.databinding.NewItemMainMenuBinding
+import com.a2z.bankak.databinding.NewItemTransferMenuBinding
 
-class MainMenuAdapter constructor(
-    private val screenWidth: Int,
-    private val onItemClicked: ((item: MainMenuItem) -> Unit)? = null,
-) : ListAdapter<MainMenuAdapter.MainMenuItem, MainMenuAdapter.ItemViewHolder>(DIFF_CALLBACK) {
+class TransferMenuAdapter constructor(
+    private val onItemClicked: ((transaction: TransferMenuItem) -> Unit)? = null,
+) : ListAdapter<TransferMenuAdapter.TransferMenuItem, TransferMenuAdapter.ItemViewHolder>(
+    DIFF_CALLBACK
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding =
-            NewItemMainMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        binding.root.layoutParams.width = screenWidth / 3
+            NewItemTransferMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding)
     }
 
@@ -25,18 +25,18 @@ class MainMenuAdapter constructor(
         if (item != null) holder.bind(item)
     }
 
-    inner class ItemViewHolder(private val binding: NewItemMainMenuBinding) :
+    inner class ItemViewHolder(private val binding: NewItemTransferMenuBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         @SuppressLint("SetTextI18n")
-        fun bind(item: MainMenuItem) {
+        fun bind(item: TransferMenuItem) {
             with(binding) {
                 // Item Data
                 tvText.text = item.text
                 ivIcon.setImageResource(item.imgResId)
 
                 // Click Listeners
-                llRootView.setOnClickListener {
+                cvRootView.setOnClickListener {
                     onItemClicked?.invoke(item)
                 }
 
@@ -45,23 +45,23 @@ class MainMenuAdapter constructor(
     }
 
     companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<MainMenuItem>() {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<TransferMenuItem>() {
             override fun areItemsTheSame(
-                oldItem: MainMenuItem,
-                newItem: MainMenuItem
+                oldItem: TransferMenuItem,
+                newItem: TransferMenuItem
             ): Boolean =
                 oldItem.id == newItem.id
 
             override fun areContentsTheSame(
-                oldItem: MainMenuItem,
-                newItem: MainMenuItem
+                oldItem: TransferMenuItem,
+                newItem: TransferMenuItem
             ): Boolean = oldItem.id == newItem.id &&
                     oldItem.imgResId == newItem.imgResId &&
                     oldItem.text == newItem.text
         }
     }
 
-    data class MainMenuItem(
+    data class TransferMenuItem(
         val id: Int,
         val imgResId: Int,
         val text: String

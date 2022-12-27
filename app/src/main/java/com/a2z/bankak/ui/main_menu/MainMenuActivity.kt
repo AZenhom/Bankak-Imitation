@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewMainMenuBinding
+import com.a2z.bankak.ui.transfer.transfer_menu.TransferMenuActivity
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
 
@@ -35,13 +36,14 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
         // Screen Width & Adapter
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
-        val adapter = MainMenuAdapter(displayMetrics.widthPixels) { showSuccessMsg(it.text) }
+        val adapter =
+            MainMenuAdapter(displayMetrics.widthPixels) { if (it.id == 2) openTransferMenuActivity() }
 
         // Binding to Views
         with(binding) {
             // Recycler View
             rvMainMenu.adapter = adapter
-            adapter.submitList(viewModel.getMenuItem(this@MainMenuActivity))
+            adapter.submitList(viewModel.getMenuItems(this@MainMenuActivity))
             // Greeting
             tvGreeting.text = greetingsText
         }
@@ -51,5 +53,9 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
         viewModel.getProfile().observe(this) {
             binding.tvName.text = it?.name
         }
+    }
+
+    private fun openTransferMenuActivity() {
+        startActivity(TransferMenuActivity.getIntent(this))
     }
 }
