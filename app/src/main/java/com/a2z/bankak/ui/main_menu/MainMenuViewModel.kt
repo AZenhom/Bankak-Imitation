@@ -1,9 +1,13 @@
 package com.a2z.bankak.ui.main_menu
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseViewModel
+import com.a2z.bankak.data.model.UserModel
+import com.hadilq.liveevent.LiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 @HiltViewModel
@@ -33,5 +37,14 @@ class MainMenuViewModel @Inject constructor(
             menuItems.add(MainMenuAdapter.MainMenuItem(i, resourcesArray[i], textArray[i]))
         }
         return menuItems
+    }
+
+    fun getProfile(): LiveData<UserModel> {
+        val liveData = LiveEvent<UserModel>()
+        safeLauncher {
+            delay(100)
+            liveData.value = UserModel("12345", "Abdulrhman Elrsheed")
+        }
+        return liveData
     }
 }
