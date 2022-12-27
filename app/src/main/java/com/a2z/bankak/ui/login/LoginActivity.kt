@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewLoginBinding
+import com.a2z.bankak.ui.main_menu.MainMenuActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,6 +36,6 @@ class LoginActivity : BaseActivity<ActivityNewLoginBinding, LoginViewModel>() {
     }
 
     private fun startLogin(id: String, password: String) {
-
+        startActivity(MainMenuActivity.getIntent(this))
     }
 }

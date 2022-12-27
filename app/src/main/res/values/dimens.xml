@@ -232,4 +232,5 @@
     <dimen name="tooltip_y_offset_non_touch">0dp</dimen>
     <dimen name="tooltip_y_offset_touch">16dp</dimen>
     <dimen name="footertext">10sp</dimen>
+    <dimen name="item_offset">8dp</dimen>
 </resources>

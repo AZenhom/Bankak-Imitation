@@ -1,20 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" card_view:cardCornerRadius="2dp" card_view:contentPaddingBottom="10dp" card_view:contentPaddingTop="10dp">
-        <RelativeLayout android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <LinearLayout android:orientation="horizontal" android:id="@+id/benfOrBilleRow" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2" android:layout_alignParentTop="true">
-                <RelativeLayout android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="0.05">
-                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp">
-                        <ImageView android:layout_gravity="center" android:id="@+id/payIcon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="0dp" android:layout_marginBottom="0dp" android:src="@drawable/fundstransfer" android:layout_centerVertical="true" android:contentDescription="@string/app_name"/>
-                        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/txtvewServiceName" android:layout_width="60dp" android:layout_height="wrap_content" android:text="@string/transfer" android:layout_below="@+id/payIcon"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPaddingBottom="10dp"
+        card_view:contentPaddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/benfOrBilleRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.05"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/payIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/fundstransfer" />
+
+                        <TextView
+                            android:id="@+id/txtvewServiceName"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/payIcon"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/transfer" />
                     </LinearLayout>
                 </RelativeLayout>
-                <RelativeLayout android:gravity="right" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1.9">
-                    <TextView android:textSize="15dp" android:textStyle="normal" android:textColor="@color/benfName" android:gravity="right" android:id="@+id/benefBillerName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Karthik"/>
-                    <TextView android:textSize="12dp" android:textColor="@color/benfsubValue" android:gravity="right" android:id="@+id/benefBillerAccNo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="A/C - 0033114209620001" android:layout_below="@+id/benefBillerName" android:layout_centerVertical="true"/>
-                    <TextView android:textSize="11dp" android:textColor="@color/benfsubValue" android:gravity="right" android:id="@+id/lastPaid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="LastPaid- 04-MAR-2018" android:layout_below="@+id/benefBillerAccNo" android:layout_centerVertical="true"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.9"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/benefBillerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="Karthik"
+                        android:textColor="@color/benfName"
+                        android:textSize="15dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/benefBillerAccNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/benefBillerName"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="A/C - 0033114209620001"
+                        android:textColor="@color/benfsubValue"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/lastPaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/benefBillerAccNo"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="LastPaid- 04-MAR-2018"
+                        android:textColor="@color/benfsubValue"
+                        android:textSize="11dp" />
                 </RelativeLayout>
-                <ImageView android:layout_gravity="center_vertical" android:id="@+id/benfOrBilleIcon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="4dp" android:src="@drawable/savingsaccount" android:layout_weight="0.05" android:contentDescription="@string/app_name"/>
+
+                <ImageView
+                    android:id="@+id/benfOrBilleIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.05"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/savingsaccount" />
             </LinearLayout>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
