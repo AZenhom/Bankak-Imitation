@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewMainMenuBinding
+import com.a2z.bankak.ui.history.history_list.TransactionHistoryActivity
 import com.a2z.bankak.ui.transfer.transfer_menu.TransferMenuActivity
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
@@ -37,7 +38,13 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
         val adapter =
-            MainMenuAdapter(displayMetrics.widthPixels) { if (it.id == 2) openTransferMenuActivity() }
+            MainMenuAdapter(displayMetrics.widthPixels) {
+                when(it.id){
+                    2 -> openTransferMenuActivity()
+                    7 -> openTransactionHistoryActivity()
+                    else -> Unit
+                }
+            }
 
         // Binding to Views
         with(binding) {
@@ -57,5 +64,9 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
 
     private fun openTransferMenuActivity() {
         startActivity(TransferMenuActivity.getIntent(this))
+    }
+
+    private fun openTransactionHistoryActivity() {
+        startActivity(TransactionHistoryActivity.getIntent(this))
     }
 }

@@ -44,6 +44,13 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name="com.a2z.bankak.ui.history.history_list.TransactionHistoryActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.a2z.bankak.ui.reports.transfer_failure.TransferFailureActivity"
             android:exported="false">
             <meta-data

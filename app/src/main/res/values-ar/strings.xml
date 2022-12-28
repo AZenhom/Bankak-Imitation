@@ -464,7 +464,7 @@
     <string name="resetimeititle">إعادة تعيين IMEI</string>
     <string name="restTitle">إعادة تعيين</string>
     <string name="retry_txt">إعادة المحاولة</string>
-    <string name="sdg">جنيه</string>
+    <string name="sdg">SDG</string>
     <string name="search_menu_title">البحث</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="selCurrency">Select Currency</string>
@@ -591,4 +591,5 @@
     <string name="zerotoonerate">لم احبه</string>
     <string name="not_available">غير موجود</string>
     <string name="no_enough_balance">لا يوجد رصيد كافى لاجراء المعاملة</string>
+    <string name="fund_transfered_to">تحويل إلى حسابات آخرى برقم</string>
 </resources>
