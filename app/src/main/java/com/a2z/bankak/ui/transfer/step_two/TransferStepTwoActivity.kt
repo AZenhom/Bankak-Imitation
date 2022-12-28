@@ -33,7 +33,7 @@ class TransferStepTwoActivity :
     override val viewModel: TransferStepTwoViewModel by viewModels()
     override val binding by viewBinding(ActivityNewTransferStepTwoBinding::inflate)
 
-    lateinit var locale: String
+    private lateinit var locale: String
 
     override fun onActivityCreated() {
         initUI()
@@ -54,9 +54,7 @@ class TransferStepTwoActivity :
         }
         with(binding.tableLayout.btnsLayout) {
             registerViewOnBackPressed(btnCancel)
-            btnSubmit.setOnClickListener {
-                openTransactionSuccessActivity(TransactionModel())
-            }
+            btnSubmit.setOnClickListener { createTransaction() }
         }
         viewModel.getLanguage().observe(this) {
             locale = it
@@ -96,6 +94,19 @@ class TransferStepTwoActivity :
             addView(tv1)
             addView(tv2)
         }
+    }
+
+    private fun createTransaction() = with(binding.tableLayout) {
+        val amountText = edtOthftAmt.text.toString().trim()
+        if (amountText.isEmpty()) {
+            showWarningMsg(getString(R.string.fieldEmpAmount_Err))
+            return@with
+        }
+        val comment = edtRemarks.text.toString().trim()
+        viewModel.createTransaction(amountText.toInt(), comment.ifEmpty { null })
+            .observe(this@TransferStepTwoActivity) {
+                if (it != null) openTransactionSuccessActivity(it)
+            }
     }
 
     private fun openTransactionSuccessActivity(transaction: TransactionModel) {

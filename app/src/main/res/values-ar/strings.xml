@@ -246,6 +246,7 @@
     <string name="fcyOthFtBenef">مستفيدي خدمة تحويل العملات الأجنبية</string>
     <string name="fcyOthTrf">تحويل العملات الأجنبية</string>
     <string name="fdate">من تاريخ</string>
+    <string name="fieldEmpAmount_Err">يجب تعبئة حقل المبلغ.</string>
     <string name="fieldEmp_Err">يجب تعبئة جميع الحقول.</string>
     <string name="fieldsEmp_Err">يجب تعبئة جميع الحقول.</string>
     <string name="first_fragment_label">First Fragment</string>

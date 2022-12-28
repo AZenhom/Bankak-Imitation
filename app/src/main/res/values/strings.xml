@@ -267,6 +267,7 @@
     <string name="fcyOthFtBenef">Foreign Currency Other Beneficiary</string>
     <string name="fcyOthTrf">Foreign Currency Other Transfer</string>
     <string name="fdate">Start Date</string>
+    <string name="fieldEmpAmount_Err">Amount field should not be empty.</string>
     <string name="fieldEmp_Err">Field should not be empty.</string>
     <string name="fieldsEmp_Err">Fields should not be empty.</string>
     <string name="first_fragment_label">First Fragment</string>

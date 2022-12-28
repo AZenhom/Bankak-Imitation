@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.TableRow
@@ -14,11 +12,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.data.model.TransactionModel
-import com.a2z.bankak.data.model.UserModel
-import com.a2z.bankak.databinding.ActivityNewTransferStepTwoBinding
 import com.a2z.bankak.databinding.ActivityNewTransferSuccessBinding
-import com.a2z.bankak.ui.transfer.step_two.TransferStepTwoActivity
-import com.a2z.bankak.ui.transfer.step_two.TransferStepTwoViewModel
 import com.safetysource.core.ui.makeVisible
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -37,7 +31,7 @@ class TransferSuccessActivity :
     override val viewModel: TransferSuccessViewModel by viewModels()
     override val binding by viewBinding(ActivityNewTransferSuccessBinding::inflate)
 
-    lateinit var locale: String
+    private lateinit var locale: String
 
     override fun onActivityCreated() {
         initUI()

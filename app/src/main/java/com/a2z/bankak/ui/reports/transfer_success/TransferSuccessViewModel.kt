@@ -22,17 +22,22 @@ class TransferSuccessViewModel @Inject constructor(
     val account: TransactionModel? = savedStateHandle[TransferSuccessActivity.TRANSACTION]
 
     fun getTransactionTable(context: Context): List<Pair<String, String>> {
-        val NA = context.getString(R.string.not_available)
+        val notAvailable = context.getString(R.string.not_available)
         val titles = mutableListOf<Pair<String, String>>()
         val textArray = context.resources.getStringArray(R.array.report_params)
-        titles.add(Pair(textArray[0], account?.id ?: NA))
-        titles.add(Pair(textArray[1], account?.createdAt?.time?.getDateText("dd-MMM-yyyy hh:mm:ss") ?: NA))
-        titles.add(Pair(textArray[2], account?.fromId ?: NA))
-        titles.add(Pair(textArray[3], account?.toId ?: NA))
-        titles.add(Pair(textArray[4], account?.toName ?: NA))
-        titles.add(Pair(textArray[5], account?.toMobile ?: NA))
-        titles.add(Pair(textArray[6], account?.comment ?: NA))
-        titles.add(Pair(textArray[7], account?.amount?.toString() ?: NA))
+        titles.add(Pair(textArray[0], account?.id ?: notAvailable))
+        titles.add(
+            Pair(
+                textArray[1],
+                account?.createdAt?.time?.getDateText("dd-MMM-yyyy HH:mm:ss") ?: notAvailable
+            )
+        )
+        titles.add(Pair(textArray[2], account?.fromId ?: notAvailable))
+        titles.add(Pair(textArray[3], account?.toId ?: notAvailable))
+        titles.add(Pair(textArray[4], account?.toName ?: notAvailable))
+        titles.add(Pair(textArray[5], account?.toMobile ?: notAvailable))
+        titles.add(Pair(textArray[6], account?.comment ?: notAvailable))
+        titles.add(Pair(textArray[7], account?.amount?.toString() ?: notAvailable))
         return titles
     }
 
