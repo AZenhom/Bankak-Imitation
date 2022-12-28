@@ -29,19 +29,4 @@ class TransferMenuViewModel @Inject constructor(
         }
         return menuItems
     }
-
-    fun getAccount(): LiveData<UserModel> {
-        val liveData = LiveEvent<UserModel>()
-        safeLauncher {
-            delay(100)
-            liveData.value = UserModel(
-                id = "12345",
-                idFull = "00012345000",
-                name = "Abdulrhman Elrsheed",
-                type = "Saving Account",
-                branch = "Makram Branch"
-            )
-        }
-        return liveData
-    }
 }
