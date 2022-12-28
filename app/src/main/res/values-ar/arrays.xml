@@ -257,4 +257,10 @@
         <item>آخر 3 شهور</item>
         <item>تحديد التاريخ</item>
     </array>
+    <array name="account_params">
+        <item>رقم الحساب</item>
+        <item>الاسم</item>
+        <item>نوع الحساب</item>
+        <item>الفرع</item>
+    </array>
 </resources>

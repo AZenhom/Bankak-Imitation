@@ -259,4 +259,10 @@
         <item>Last 3 Months</item>
         <item>By Date</item>
     </array>
+    <array name="account_params">
+        <item>Account no</item>
+        <item>Name</item>
+        <item>Account Type</item>
+        <item>Branch</item>
+    </array>
 </resources>

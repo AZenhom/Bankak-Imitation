@@ -43,7 +43,13 @@ class MainMenuViewModel @Inject constructor(
         val liveData = LiveEvent<UserModel>()
         safeLauncher {
             delay(100)
-            liveData.value = UserModel("12345", "Abdulrhman Elrsheed")
+            liveData.value = UserModel(
+                id = "12345",
+                idFull = "00012345000",
+                name = "Abdulrhman Elrsheed",
+                type = "Saving Account",
+                branch = "Makram Branch"
+            )
         }
         return liveData
     }

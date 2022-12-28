@@ -26,7 +26,7 @@ class SettingsDataStore @Inject constructor(@ApplicationContext val context: Con
 
     suspend fun getLanguage(): String {
         return context.settingsDataStore.data.map {
-            it[languagePref] ?: "ar"
+            it[languagePref] ?: "en"
         }.first()
     }
 }

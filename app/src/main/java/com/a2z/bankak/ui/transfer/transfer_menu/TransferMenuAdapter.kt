@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.a2z.bankak.databinding.NewItemTransferMenuBinding
 
 class TransferMenuAdapter constructor(
-    private val onItemClicked: ((transaction: TransferMenuItem) -> Unit)? = null,
+    private val onItemClicked: ((item: TransferMenuItem) -> Unit)? = null,
 ) : ListAdapter<TransferMenuAdapter.TransferMenuItem, TransferMenuAdapter.ItemViewHolder>(
     DIFF_CALLBACK
 ) {

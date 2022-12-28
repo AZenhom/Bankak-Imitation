@@ -76,7 +76,6 @@
             android:gravity="center"
             android:text=""
             android:textColor="@color/titleClr"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"/>
     </RelativeLayout>
 </LinearLayout>
