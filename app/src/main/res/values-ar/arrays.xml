@@ -263,4 +263,14 @@
         <item>نوع الحساب</item>
         <item>الفرع</item>
     </array>
+    <array name="report_params">
+        <item>رقم العملية</item>
+        <item>التاريخ و الزمن</item>
+        <item>من حساب</item>
+        <item>الى حساب</item>
+        <item>اسم المرسل اليه</item>
+        <item>رقم الموبايل</item>
+        <item>التعليق</item>
+        <item>المبلغ</item>
+    </array>
 </resources>

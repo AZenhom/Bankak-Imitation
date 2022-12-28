@@ -10,8 +10,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.widget.AppCompatTextView
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
+import com.a2z.bankak.data.model.TransactionModel
 import com.a2z.bankak.data.model.UserModel
 import com.a2z.bankak.databinding.ActivityNewTransferStepTwoBinding
+import com.a2z.bankak.ui.reports.transfer_success.TransferSuccessActivity
 import com.safetysource.core.ui.makeGone
 import com.safetysource.core.ui.makeVisible
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,7 +55,7 @@ class TransferStepTwoActivity :
         with(binding.tableLayout.btnsLayout) {
             registerViewOnBackPressed(btnCancel)
             btnSubmit.setOnClickListener {
-
+                openTransactionSuccessActivity(TransactionModel())
             }
         }
         viewModel.getLanguage().observe(this) {
@@ -94,5 +96,10 @@ class TransferStepTwoActivity :
             addView(tv1)
             addView(tv2)
         }
+    }
+
+    private fun openTransactionSuccessActivity(transaction: TransactionModel) {
+        startActivity(TransferSuccessActivity.getIntent(this, transaction))
+        finish()
     }
 }

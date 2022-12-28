@@ -94,7 +94,7 @@
     <dimen name="compat_control_corner_material">2dp</dimen>
     <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
     <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
-    <dimen name="design_appbar_elevation">4dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_item_min_width">96dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>

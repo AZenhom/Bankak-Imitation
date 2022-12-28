@@ -265,4 +265,14 @@
         <item>Account Type</item>
         <item>Branch</item>
     </array>
+    <array name="report_params">
+        <item>Transaction No</item>
+        <item>Date and time</item>
+        <item>From account</item>
+        <item>To Account</item>
+        <item>To Account</item>
+        <item>Mobile No</item>
+        <item>Comment</item>
+        <item>Amount</item>
+    </array>
 </resources>
