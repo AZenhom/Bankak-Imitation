@@ -13,6 +13,7 @@ import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.data.model.TransactionModel
 import com.a2z.bankak.data.model.UserModel
 import com.a2z.bankak.databinding.ActivityNewTransferStepTwoBinding
+import com.a2z.bankak.ui.reports.transfer_failure.TransferFailureActivity
 import com.a2z.bankak.ui.reports.transfer_success.TransferSuccessActivity
 import com.safetysource.core.ui.makeGone
 import com.safetysource.core.ui.makeVisible
@@ -106,11 +107,17 @@ class TransferStepTwoActivity :
         viewModel.createTransaction(amountText.toInt(), comment.ifEmpty { null })
             .observe(this@TransferStepTwoActivity) {
                 if (it != null) openTransactionSuccessActivity(it)
+                else openTransactionFailureActivity()
             }
     }
 
     private fun openTransactionSuccessActivity(transaction: TransactionModel) {
         startActivity(TransferSuccessActivity.getIntent(this, transaction))
+        finish()
+    }
+
+    private fun openTransactionFailureActivity() {
+        startActivity(TransferFailureActivity.getIntent(this))
         finish()
     }
 }

@@ -647,4 +647,5 @@
     <string name="youtubeURL">https://www.youtube.com/channel/UCL46EYOz7AgIqVsOYPa9Lag</string>
     <string name="zerotoonerate">Hated it</string>
     <string name="not_available">N/A</string>
+    <string name="no_enough_balance">There is not enough balance to complete the transaction</string>
 </resources>
