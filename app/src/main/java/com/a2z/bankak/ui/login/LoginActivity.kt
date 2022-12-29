@@ -7,6 +7,7 @@ import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewLoginBinding
 import com.a2z.bankak.ui.main_menu.MainMenuActivity
+import com.a2z.bankak.ui.splash.SplashActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,6 +25,7 @@ class LoginActivity : BaseActivity<ActivityNewLoginBinding, LoginViewModel>() {
     }
 
     private fun initUI() = with(binding) {
+        switchLang.setOnClickListener { switchLanguage() }
         loginBtn.setOnClickListener {
             val id = edtmbCif.text.toString().trim()
             val password = edmbPwd.text.toString().trim()
@@ -37,5 +39,15 @@ class LoginActivity : BaseActivity<ActivityNewLoginBinding, LoginViewModel>() {
 
     private fun startLogin(id: String, password: String) {
         startActivity(MainMenuActivity.getIntent(this))
+    }
+
+    private fun switchLanguage() {
+        viewModel.switchLanguage(this).observe(this) {
+            val intent = SplashActivity.getIntent(this)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+            finish()
+        }
     }
 }

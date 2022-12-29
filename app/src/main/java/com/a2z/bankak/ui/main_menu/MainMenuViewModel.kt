@@ -5,13 +5,16 @@ import androidx.lifecycle.LiveData
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseViewModel
 import com.a2z.bankak.data.model.UserModel
+import com.a2z.bankak.data.repository.SettingsRepository
 import com.hadilq.liveevent.LiveEvent
+import com.yariksoffice.lingver.Lingver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 @HiltViewModel
 class MainMenuViewModel @Inject constructor(
+    private val settingsRepository: SettingsRepository
 ) : BaseViewModel() {
 
     fun getMenuItems(context: Context): List<MainMenuAdapter.MainMenuItem> {
@@ -50,6 +53,18 @@ class MainMenuViewModel @Inject constructor(
                 type = "Saving Account",
                 branch = "Makram Branch"
             )
+        }
+        return liveData
+    }
+
+    fun switchLanguage(context: Context): LiveData<Boolean> {
+        val liveData = LiveEvent<Boolean>()
+        safeLauncher {
+            val currentLanguage = settingsRepository.getCurrentLanguage()
+            val newLanguage = if (currentLanguage == "en") "ar" else "en"
+            Lingver.getInstance().setLocale(context, newLanguage)
+            settingsRepository.setCurrentLanguage(newLanguage)
+            liveData.value = true
         }
         return liveData
     }

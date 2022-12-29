@@ -1,6 +1,8 @@
 package com.a2z.bankak.ui.splash
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.activity.viewModels
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
@@ -19,6 +21,10 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : BaseActivity<NewLayoutSplashActivityBinding, SplashViewModel>() {
+
+    companion object {
+        fun getIntent(context: Context) = Intent(context, SplashActivity::class.java)
+    }
 
     override val viewModel: SplashViewModel by viewModels()
     override val binding by viewBinding(NewLayoutSplashActivityBinding::inflate)

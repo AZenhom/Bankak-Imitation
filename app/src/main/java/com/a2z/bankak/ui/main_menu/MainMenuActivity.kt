@@ -8,6 +8,7 @@ import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewMainMenuBinding
 import com.a2z.bankak.ui.history.history_list.TransactionHistoryActivity
+import com.a2z.bankak.ui.splash.SplashActivity
 import com.a2z.bankak.ui.transfer.transfer_menu.TransferMenuActivity
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
@@ -21,6 +22,8 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
 
     override val viewModel: MainMenuViewModel by viewModels()
     override val binding by viewBinding(ActivityNewMainMenuBinding::inflate)
+
+    private var clicksToChangeLanguage = 10
 
     override fun onActivityCreated() {
         initUI()
@@ -42,6 +45,7 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
                 when(it.id){
                     2 -> openTransferMenuActivity()
                     7 -> openTransactionHistoryActivity()
+                    8 -> switchLanguage()
                     else -> Unit
                 }
             }
@@ -59,6 +63,19 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
     private fun getProfile() {
         viewModel.getProfile().observe(this) {
             binding.tvName.text = it?.name
+        }
+    }
+
+    private fun switchLanguage() {
+        clicksToChangeLanguage--
+        if(clicksToChangeLanguage != 0)
+            return
+        viewModel.switchLanguage(this).observe(this) {
+            val intent = SplashActivity.getIntent(this)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+            finish()
         }
     }
 
