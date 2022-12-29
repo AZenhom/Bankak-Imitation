@@ -650,4 +650,6 @@
     <string name="no_enough_balance">There is not enough balance to complete the transaction</string>
     <string name="fund_transferred_to_other_account">Fund transferred to other account</string>
     <string name="fund_transferred_to_other_accounts_with_id">Fund transferred to account number</string>
+    <string name="invalid_id_password">Invalid source. PLease contact Customer Care</string>
+    <string name="invalid_account">Invalid source. Cannot find account with this Id</string>
 </resources>

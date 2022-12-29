@@ -5,7 +5,9 @@ import androidx.lifecycle.LiveData
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseViewModel
 import com.a2z.bankak.data.model.UserModel
+import com.a2z.bankak.data.model.response.StatefulResult
 import com.a2z.bankak.data.repository.SettingsRepository
+import com.a2z.bankak.data.repository.UserRepository
 import com.hadilq.liveevent.LiveEvent
 import com.yariksoffice.lingver.Lingver
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,8 +16,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainMenuViewModel @Inject constructor(
+    private val userRepository: UserRepository,
     private val settingsRepository: SettingsRepository
 ) : BaseViewModel() {
+
+    private val _onLogOutLiveData: LiveEvent<Boolean> = LiveEvent()
+    val onLogOutLiveData: LiveData<Boolean> get() = _onLogOutLiveData
+
+    init {
+        updateCurrentRetailerModel()
+    }
 
     fun getMenuItems(context: Context): List<MainMenuAdapter.MainMenuItem> {
         val menuItems = mutableListOf<MainMenuAdapter.MainMenuItem>()
@@ -45,14 +55,7 @@ class MainMenuViewModel @Inject constructor(
     fun getProfile(): LiveData<UserModel> {
         val liveData = LiveEvent<UserModel>()
         safeLauncher {
-            delay(100)
-            liveData.value = UserModel(
-                id = "12345",
-                idFull = "00012345000",
-                name = "Abdulrhman Elrsheed",
-                type = "Saving Account",
-                branch = "Makram Branch"
-            )
+            liveData.value = userRepository.getCurrentUserModel()
         }
         return liveData
     }
@@ -67,5 +70,23 @@ class MainMenuViewModel @Inject constructor(
             liveData.value = true
         }
         return liveData
+    }
+
+    fun updateCurrentRetailerModel() = safeLauncher {
+        val userId = userRepository.getCurrentUserModel()?.id
+        if (userId.isNullOrEmpty()) {
+            logout()
+            return@safeLauncher
+        }
+        val result = userRepository.getUserById(userId)
+        if (result is StatefulResult.Success && result.data != null)
+            userRepository.setCurrentUserModel(result.data)
+        else
+            logout()
+    }
+
+    fun logout() = safeLauncher {
+        userRepository.removeAllPref()
+        _onLogOutLiveData.value = true
     }
 }

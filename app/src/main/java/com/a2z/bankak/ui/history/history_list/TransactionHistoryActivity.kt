@@ -8,6 +8,7 @@ import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.data.model.TransactionModel
 import com.a2z.bankak.databinding.ActivityNewTransactionHistoryBinding
 import com.a2z.bankak.ui.history.history_report.HistoryReportActivity
+import com.safetysource.core.ui.makeGone
 import com.safetysource.core.ui.makeVisible
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -31,6 +32,8 @@ class TransactionHistoryActivity :
 
     private fun initUI() {
         with(binding.header) {
+            toolbar.out.makeGone()
+            toolbar.menuIcon.makeVisible()
             headerTitleLay.makeVisible()
             servTitle.text = getString(R.string.trxHist)
             registerViewOnBackPressed(backmen)

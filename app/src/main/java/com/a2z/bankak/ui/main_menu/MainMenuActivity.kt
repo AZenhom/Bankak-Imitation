@@ -26,8 +26,24 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
     private var clicksToChangeLanguage = 10
 
     override fun onActivityCreated() {
+        initObservers()
         initUI()
         getProfile()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.updateCurrentRetailerModel()
+    }
+
+    private fun initObservers() {
+        viewModel.onLogOutLiveData.observe(this) {
+            val intent = SplashActivity.getIntent(this)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun initUI() {
@@ -42,7 +58,7 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
         windowManager.defaultDisplay.getMetrics(displayMetrics)
         val adapter =
             MainMenuAdapter(displayMetrics.widthPixels) {
-                when(it.id){
+                when (it.id) {
                     2 -> openTransferMenuActivity()
                     7 -> openTransactionHistoryActivity()
                     8 -> switchLanguage()
@@ -57,6 +73,8 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
             adapter.submitList(viewModel.getMenuItems(this@MainMenuActivity))
             // Greeting
             tvGreeting.text = greetingsText
+            // Logout
+            header.toolbar.out.setOnClickListener { viewModel.logout() }
         }
     }
 
@@ -68,7 +86,7 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
 
     private fun switchLanguage() {
         clicksToChangeLanguage--
-        if(clicksToChangeLanguage != 0)
+        if (clicksToChangeLanguage != 0)
             return
         viewModel.switchLanguage(this).observe(this) {
             val intent = SplashActivity.getIntent(this)

@@ -23,7 +23,14 @@ android {
     }
 
     buildTypes {
+        debug{
+            buildConfigField "String", "COLLECTION_USER", "\"User\""
+            buildConfigField "String", "COLLECTION_TRANSACTION", "\"Transaction\""
+        }
         release {
+            buildConfigField "String", "COLLECTION_USER", "\"User\""
+            buildConfigField "String", "COLLECTION_TRANSACTION", "\"Transaction\""
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

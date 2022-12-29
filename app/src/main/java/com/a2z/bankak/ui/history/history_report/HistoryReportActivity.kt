@@ -41,6 +41,8 @@ class HistoryReportActivity :
     private fun initUI() {
         // Binding to Views
         with(binding.header) {
+            toolbar.out.makeGone()
+            toolbar.menuIcon.makeVisible()
             headerTitleLay.makeVisible()
             servTitle.text = getString(R.string.payTrxDetailsTitle)
             registerViewOnBackPressed(backmen)

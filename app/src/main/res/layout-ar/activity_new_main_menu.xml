@@ -15,7 +15,7 @@
         android:background="@null"
         android:orientation="vertical">
 
-        <include layout="@layout/header_lay" />
+        <include android:id="@+id/header" layout="@layout/header_lay" />
 
         <LinearLayout
             android:layout_width="match_parent"

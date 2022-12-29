@@ -7,6 +7,7 @@ import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewTransferMenuBinding
 import com.a2z.bankak.ui.transfer.step_one.TransferStepOneActivity
+import com.safetysource.core.ui.makeGone
 import com.safetysource.core.ui.makeVisible
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,6 +28,8 @@ class TransferMenuActivity : BaseActivity<ActivityNewTransferMenuBinding, Transf
     private fun initUI() {
         // Binding to Views
         with(binding.header) {
+            toolbar.out.makeGone()
+            toolbar.menuIcon.makeVisible()
             headerTitleLay.makeVisible()
             servTitle.text = getString(R.string.ftTitle)
             registerViewOnBackPressed(backmen)

@@ -593,4 +593,6 @@
     <string name="no_enough_balance">لا يوجد رصيد كافى لاجراء المعاملة</string>
     <string name="fund_transferred_to_other_account">تحويل إلى حساب آخر</string>
     <string name="fund_transferred_to_other_accounts_with_id">تحويل إلى حسابات آخرى برقم</string>
+    <string name="invalid_id_password">Invalid source. PLease contact Customer Care</string>
+    <string name="invalid_account">Invalid source. Cannot find account with this Id</string>
 </resources>

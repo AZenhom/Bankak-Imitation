@@ -10,6 +10,7 @@ import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.NewLayoutSplashActivityBinding
 import com.a2z.bankak.ui.login.LoginActivity
+import com.a2z.bankak.ui.main_menu.MainMenuActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
@@ -46,8 +47,21 @@ class SplashActivity : BaseActivity<NewLayoutSplashActivityBinding, SplashViewMo
         }
     }
 
-    private fun checkNavigation() {
+    private fun checkNavigation() = viewModel.checkNavigation().observe(this) {
+        when (it) {
+            NavigationCases.NOT_LOGGED_IN -> startLoginActivity()
+            NavigationCases.LOGGED_IN -> startMainMenuActivity()
+            else -> Unit
+        }
+    }
+
+    private fun startLoginActivity() {
         startActivity(LoginActivity.getIntent(this))
+        finish()
+    }
+
+    private fun startMainMenuActivity() {
+        startActivity(MainMenuActivity.getIntent(this))
         finish()
     }
 

@@ -9,15 +9,19 @@ import com.a2z.bankak.core.base.BaseViewModel
 import com.a2z.bankak.data.cache.SettingsDataStore
 import com.a2z.bankak.data.model.TransactionModel
 import com.a2z.bankak.data.model.UserModel
+import com.a2z.bankak.data.model.response.StatefulResult
+import com.a2z.bankak.data.repository.TransactionsRepository
+import com.a2z.bankak.data.repository.UserRepository
 import com.hadilq.liveevent.LiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
-import java.util.Calendar
+import java.util.*
 import javax.inject.Inject
 import kotlin.random.Random
 
 @HiltViewModel
 class TransferStepTwoViewModel @Inject constructor(
+    private val transactionsRepository: TransactionsRepository,
+    private val userRepository: UserRepository,
     private val settingsDataStore: SettingsDataStore,
     savedStateHandle: SavedStateHandle
 ) : BaseViewModel() {
@@ -45,17 +49,32 @@ class TransferStepTwoViewModel @Inject constructor(
     fun createTransaction(amount: Int, comment: String?): LiveData<TransactionModel?> {
         val liveEvent = LiveEvent<TransactionModel?>()
         safeLauncher {
-            delay(100)
+            showLoading()
             val transaction = TransactionModel(
                 id = "2000${Random.nextLong(1000000, 9999999)}".toLong().toString(),
-                fromId = account?.idFull,
+                fromId = userRepository.getUserId(),
                 toId = account?.idFull,
                 toName = account?.name,
                 comment = comment,
                 amount = amount,
                 createdAt = Calendar.getInstance().time
             )
-            liveEvent.value = transaction
+            val userModel = userRepository.getUserByIdFull(userRepository.getUserId() ?: "").data
+            if (userModel == null || (userModel.credit ?: 0) < amount) {
+                hideLoading()
+                liveEvent.value = null
+                return@safeLauncher
+            }
+            userModel.apply { credit = credit!! - amount }
+            account!!.apply { credit = (credit ?: 0) + amount }
+            userRepository.setCurrentUserModel(userModel)
+            val result1 = userRepository.createUpdateUser(userModel)
+            val result2 = userRepository.createUpdateUser(account)
+            val result3 = transactionsRepository.createTransactions(transaction)
+            if (result1 is StatefulResult.Success && result2 is StatefulResult.Success && result3 is StatefulResult.Success)
+                liveEvent.value = transaction
+            else
+                liveEvent.value = null
         }
         return liveEvent
     }

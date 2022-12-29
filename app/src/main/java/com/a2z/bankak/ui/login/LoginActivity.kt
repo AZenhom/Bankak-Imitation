@@ -37,8 +37,17 @@ class LoginActivity : BaseActivity<ActivityNewLoginBinding, LoginViewModel>() {
         }
     }
 
-    private fun startLogin(id: String, password: String) {
+    private fun startLogin(id: String, password: String) =
+        viewModel.login(id, password).observe(this) {
+            if (it) startMainMenuActivity()
+            else {
+                showErrorMsg(getString(R.string.invalid_id_password))
+            }
+        }
+
+    private fun startMainMenuActivity() {
         startActivity(MainMenuActivity.getIntent(this))
+        finish()
     }
 
     private fun switchLanguage() {

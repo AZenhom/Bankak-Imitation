@@ -30,6 +30,8 @@ class TransferStepOneActivity :
 
     private fun initUI() {
         with(binding.header) {
+            toolbar.out.makeGone()
+            toolbar.menuIcon.makeVisible()
             headerTitleLay.makeVisible()
             servTitle.text = getString(R.string.othFtTitle)
             registerViewOnBackPressed(backmen)
@@ -51,6 +53,9 @@ class TransferStepOneActivity :
     private fun getAccount(accNo: String) {
         viewModel.getAccount(accNo).observe(this) {
             if (it != null) openTransferStepTwoActivity(it)
+            else {
+                showErrorMsg(getString(R.string.invalid_account))
+            }
         }
     }
 

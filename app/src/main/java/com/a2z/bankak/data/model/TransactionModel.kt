@@ -11,4 +11,8 @@ data class TransactionModel(
     val comment: String? = null,
     val amount: Int? = null,
     val createdAt: Date? = null,
-) : java.io.Serializable
+) : java.io.Serializable {
+    companion object {
+        const val FROM_ID = "fromId"
+    }
+}

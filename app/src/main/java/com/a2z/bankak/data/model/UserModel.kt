@@ -5,5 +5,11 @@ data class UserModel(
     val idFull: String? = null,
     val name: String? = null,
     val type: String? = null,
-    val branch: String? = null
-) : java.io.Serializable
+    val branch: String? = null,
+    var credit: Int? = null,
+    val password: String? = null
+) : java.io.Serializable {
+    companion object {
+        const val ID_FULL = "idFull"
+    }
+}
