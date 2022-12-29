@@ -263,7 +263,7 @@
         <item>نوع الحساب</item>
         <item>الفرع</item>
     </array>
-    <array name="report_params">
+    <array name="success_report_params">
         <item>رقم العملية</item>
         <item>التاريخ و الزمن</item>
         <item>من حساب</item>
@@ -272,5 +272,16 @@
         <item>رقم الموبايل</item>
         <item>التعليق</item>
         <item>المبلغ</item>
+    </array>
+    <array name="history_report_params">
+        <item>رقم العملية</item>
+        <item>التاريخ و الوقت</item>
+        <item>نوع العملية</item>
+        <item>المبلغ</item>
+        <item>من</item>
+        <item>الى</item>
+        <item>الحالة</item>
+        <item>اسم المرسل اليه</item>
+        <item>التعليق</item>
     </array>
 </resources>

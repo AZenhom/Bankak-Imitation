@@ -1,4 +1,4 @@
-package com.a2z.bankak.ui.reports.transfer_success
+package com.a2z.bankak.ui.history.history_report
 
 import android.content.Context
 import androidx.lifecycle.LiveData
@@ -12,19 +12,18 @@ import com.a2z.bankak.data.model.TransactionModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-
 @HiltViewModel
-class TransferSuccessViewModel @Inject constructor(
+class HistoryReportViewModel @Inject constructor(
     private val settingsDataStore: SettingsDataStore,
     savedStateHandle: SavedStateHandle
 ) : BaseViewModel() {
 
-    val transaction: TransactionModel? = savedStateHandle[TransferSuccessActivity.TRANSACTION]
+    val transaction: TransactionModel? = savedStateHandle[HistoryReportActivity.TRANSACTION]
 
     fun getTransactionTable(context: Context): List<Pair<String, String>> {
         val notAvailable = context.getString(R.string.not_available)
         val titles = mutableListOf<Pair<String, String>>()
-        val textArray = context.resources.getStringArray(R.array.success_report_params)
+        val textArray = context.resources.getStringArray(R.array.history_report_params)
         titles.add(Pair(textArray[0], transaction?.id ?: notAvailable))
         titles.add(
             Pair(
@@ -32,12 +31,19 @@ class TransferSuccessViewModel @Inject constructor(
                 transaction?.createdAt?.time?.getDateText("dd-MMM-yyyy HH:mm:ss") ?: notAvailable
             )
         )
-        titles.add(Pair(textArray[2], transaction?.fromId ?: notAvailable))
-        titles.add(Pair(textArray[3], transaction?.toId ?: notAvailable))
-        titles.add(Pair(textArray[4], transaction?.toName ?: notAvailable))
-        titles.add(Pair(textArray[5], transaction?.toMobile ?: notAvailable))
-        titles.add(Pair(textArray[6], transaction?.comment ?: notAvailable))
-        titles.add(Pair(textArray[7], transaction?.amount?.toString() ?: notAvailable))
+        titles.add(
+            Pair(
+                textArray[2],
+                context.getString(R.string.fund_transferred_to_other_account)
+            )
+        )
+        titles.add(Pair(textArray[3], transaction?.amount?.toString() ?: notAvailable))
+        titles.add(Pair(textArray[4], transaction?.fromId ?: notAvailable))
+        titles.add(Pair(textArray[5], transaction?.toId ?: notAvailable))
+        titles.add(Pair(textArray[6], context.getString(R.string.sucess_digTitle)))
+        titles.add(Pair(textArray[7], transaction?.toName ?: notAvailable))
+        titles.add(
+            Pair(textArray[8], transaction?.comment?.ifEmpty { notAvailable } ?: notAvailable))
         return titles
     }
 

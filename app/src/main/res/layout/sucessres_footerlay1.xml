@@ -1,25 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <Button android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/sucessres_Okbtn" android:background="@drawable/sucessbutton" android:layout_width="100dp" android:layout_height="wrap_content" android:scaleType="fitCenter" android:text="@string/ok_str" android:onClick="true" android:textAllCaps="false"/>
-    <RelativeLayout android:orientation="horizontal" android:id="@+id/relativeaddpay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp" android:layout_centerVertical="true">
-        <ImageView android:gravity="center_vertical" android:id="@+id/imgvewAddMore" android:layout_width="70dp" android:layout_height="70dp" android:layout_marginRight="5dp"/>
-        <ImageView android:gravity="center_vertical" android:id="@+id/imgvewPayMore" android:layout_width="70dp" android:layout_height="70dp" android:layout_marginLeft="5dp" android:layout_alignParentRight="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/sucessres_Okbtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sucessbutton"
+        android:scaleType="fitCenter"
+        android:text="@string/ok_str"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/relativeaddpay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgvewAddMore"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:id="@+id/imgvewPayMore"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical" />
     </RelativeLayout>
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/shareDownPrintLay" android:background="@drawable/result_footer_bg" android:paddingTop="3dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
-        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/shareBtnLay" android:paddingLeft="10dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ImageView android:gravity="center_vertical" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/share"/>
-            <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/shareBtnTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/share"/>
+
+    <LinearLayout
+        android:id="@+id/shareDownPrintLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/result_footer_bg_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="3dp">
+
+        <LinearLayout
+            android:id="@+id/shareBtnLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/share"
+                app:tint="@color/textClr"/>
+
+            <TextView
+                android:id="@+id/shareBtnTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/share"
+                android:textColor="@color/textClr"
+                android:textSize="14sp" />
         </LinearLayout>
-        <View android:layout_gravity="center_vertical" android:background="@drawable/whiteviewstraight" android:layout_width="3dp" android:layout_height="20dp" android:layout_margin="3dp"/>
-        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/printBtnLay" android:paddingLeft="10dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ImageView android:gravity="center_vertical" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/print"/>
-            <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/printBtnTxt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/print"/>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:background="@drawable/whiteviewstraight"
+            android:foreground="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/printBtnLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/print"
+                app:tint="@color/textClr"/>
+
+            <TextView
+                android:id="@+id/printBtnTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/print"
+                android:textColor="@color/textClr"
+                android:textSize="14sp" />
         </LinearLayout>
-        <View android:layout_gravity="center_vertical" android:background="@drawable/whiteviewstraight" android:layout_width="3dp" android:layout_height="20dp" android:layout_margin="3dp"/>
-        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/downloadBtnLay" android:paddingLeft="20dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ImageView android:gravity="center_vertical" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/download"/>
-            <ProgressBar android:id="@+id/downlProg" android:background="@drawable/download" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="10dp" android:progress="0" android:indeterminate="false" android:progressDrawable="@drawable/circular_progress_bar" android:layout_centerInParent="true" android:layout_marginStart="10dp" style="?android:attr/progressBarStyleHorizontal"/>
-            <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/downloadBtnTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="@string/downlaod"/>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:background="@drawable/whiteviewstraight"
+            android:foreground="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/downloadBtnLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/download"
+                app:tint="@color/textClr"/>
+
+            <ProgressBar
+                android:id="@+id/downlProg"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/download"
+                android:indeterminate="false"
+                android:progress="0"
+                android:visibility="gone"
+                android:backgroundTint="@color/textClr"
+                android:progressDrawable="@drawable/circular_progress_bar" />
+
+            <TextView
+                android:id="@+id/downloadBtnTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/downlaod"
+                android:textColor="@color/textClr"
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

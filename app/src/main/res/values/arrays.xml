@@ -265,14 +265,25 @@
         <item>Account Type</item>
         <item>Branch</item>
     </array>
-    <array name="report_params">
+    <array name="success_report_params">
         <item>Transaction No</item>
         <item>Date and time</item>
         <item>From account</item>
         <item>To Account</item>
-        <item>To Account</item>
+        <item>Name</item>
         <item>Mobile No</item>
         <item>Comment</item>
         <item>Amount</item>
+    </array>
+    <array name="history_report_params">
+        <item>Transaction No</item>
+        <item>Date and tim</item>
+        <item>Transaction Type</item>
+        <item>Amount</item>
+        <item>From</item>
+        <item>To</item>
+        <item>Status</item>
+        <item>Name</item>
+        <item>Comment</item>
     </array>
 </resources>

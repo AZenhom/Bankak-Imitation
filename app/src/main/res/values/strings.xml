@@ -648,5 +648,6 @@
     <string name="zerotoonerate">Hated it</string>
     <string name="not_available">N/A</string>
     <string name="no_enough_balance">There is not enough balance to complete the transaction</string>
-    <string name="fund_transfered_to">Fund transferred to acc number</string>
+    <string name="fund_transferred_to_other_account">Fund transferred to other account</string>
+    <string name="fund_transferred_to_other_accounts_with_id">Fund transferred to account number</string>
 </resources>

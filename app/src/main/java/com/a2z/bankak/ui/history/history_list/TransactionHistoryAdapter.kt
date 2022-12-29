@@ -42,7 +42,7 @@ class TransactionHistoryAdapter constructor(
                 trxAmt.text =
                     "${trxAmt.context.getString(R.string.sdg)}. ${item.amount?.toString()}"
                 trxDescr.text =
-                    "${trxDescr.context.getString(R.string.fund_transfered_to)}\n${item.toId}"
+                    "${trxDescr.context.getString(R.string.fund_transferred_to_other_accounts_with_id)}\n${item.toId}"
 
                 // Click Listeners
                 llRootView.setOnClickListener {
