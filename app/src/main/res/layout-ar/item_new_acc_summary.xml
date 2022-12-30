@@ -3,6 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_marginHorizontal="@dimen/_8sdp"
     android:layout_marginTop="@dimen/_16sdp">
@@ -26,55 +27,12 @@
                 android:id="@+id/accSum_mainRow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:background="@null"
                 android:orientation="horizontal"
                 android:weightSum="3">
-
-                <ImageView
-                    android:id="@+id/accTypeIcon"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="0.1"
-                    android:layout_margin="@dimen/_4sdp"
-                    android:src="@drawable/savingsaccount"
-                    android:contentDescription="@string/app_name" />
-
-                <RelativeLayout
-                    android:id="@+id/accSum_subRow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1.3">
-
-                    <TextView
-                        android:id="@+id/accType"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/saving_account"
-                        android:textColor="@color/accType"
-                        android:textSize="15sp"
-                        android:textStyle="normal" />
-
-                    <TextView
-                        android:id="@+id/accNo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/accType"
-                        android:layout_centerVertical="true"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/account_no"
-                        android:textColor="@color/accNo"
-                        android:textSize="12sp" />
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/accSum_subRowOne"
@@ -88,22 +46,65 @@
                         android:id="@+id/currIcon"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_alignParentRight="true"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/sdg" />
 
                     <TextView
                         android:id="@+id/accBal"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/currIcon"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_4sdp"
                         android:layout_centerVertical="true"
-                        android:paddingRight="5dp"
-                        android:text="1,234,567"
+                        tools:text="1,234,567"
+                        android:gravity="left"
                         android:textColor="@color/green"
                         android:textSize="14sp" />
                 </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/accSum_subRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.3">
+
+                    <TextView
+                        android:id="@+id/accType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saving_account"
+                        android:textColor="@color/accType"
+                        android:textSize="15sp"
+                        android:gravity="right"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/accNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/accType"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/account_no"
+                        android:gravity="right"
+                        android:textColor="@color/accNo"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/accTypeIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:src="@drawable/savingsaccount"
+                    android:contentDescription="@string/app_name" />
+
+
             </LinearLayout>
 
             <View

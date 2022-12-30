@@ -432,7 +432,7 @@
     <string name="qrPaidAmtTitle">المبلغ</string>
     <string name="qrPaidRefno">الرقم المرجعي.</string>
     <string name="qrPayTitle">‫بنكك‬PAY</string>
-    <string name="qrcode">رمز الدفع \nالسريع QR</string>
+    <string name="qrcode">رمز الدفع السريع QR</string>
     <string name="ques_five" />
     <string name="ques_four" />
     <string name="ques_one" />
