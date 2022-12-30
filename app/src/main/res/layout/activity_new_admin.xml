@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/mail_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerr">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/header_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="320dp"
+                android:background="@drawable/headerbg">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/white_logo_n" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="220dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/lay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="ID"
+                            android:inputType="number"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:layout_below="@+id/lay1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etIdFull"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="Id Full"
+                            android:inputType="number"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay3"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:gravity="center"
+                    android:layout_below="@+id/lay2"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay4"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:layout_below="@+id/lay3"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="Branch"
+                            android:inputType="textPersonName"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay5"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:gravity="center"
+                    android:layout_below="@+id/lay4"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etCredit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="Credit"
+                            android:inputType="number"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay6"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/lay5"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/borders"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edmbPwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/mbPwdIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginpinicon" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay6"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button"
+                    android:scaleType="fitCenter"
+                    android:text="Register New Account"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -8,6 +8,7 @@ import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewMainMenuBinding
 import com.a2z.bankak.ui.account_details.details.AccountDetailsActivity
+import com.a2z.bankak.ui.admin.AdminActivity
 import com.a2z.bankak.ui.history.history_list.TransactionHistoryActivity
 import com.a2z.bankak.ui.splash.SplashActivity
 import com.a2z.bankak.ui.transfer.transfer_menu.TransferMenuActivity
@@ -24,7 +25,8 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
     override val viewModel: MainMenuViewModel by viewModels()
     override val binding by viewBinding(ActivityNewMainMenuBinding::inflate)
 
-    private var clicksToChangeLanguage = 10
+    private var clicksToChangeLanguage = 3
+    private var isAdmin = false
 
     override fun onActivityCreated() {
         initObservers()
@@ -64,7 +66,7 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
                     2 -> openTransferMenuActivity()
                     7 -> openTransactionHistoryActivity()
                     8 -> switchLanguage()
-                    12 -> Unit
+                    12 -> openAdminActivity()
                     else -> Unit
                 }
             }
@@ -84,6 +86,7 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
     private fun getProfile() {
         viewModel.getProfile().observe(this) {
             binding.tvName.text = it?.name
+            isAdmin = it.admin == 1
         }
     }
 
@@ -110,5 +113,9 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
 
     private fun openTransactionHistoryActivity() {
         startActivity(TransactionHistoryActivity.getIntent(this))
+    }
+
+    private fun openAdminActivity() {
+        if (isAdmin) startActivity(AdminActivity.getIntent(this))
     }
 }

@@ -8,7 +8,7 @@ data class UserModel(
     val branch: String? = null,
     var credit: Int? = null,
     val password: String? = null,
-    val isAdmin: Boolean? = null
+    val admin: Int? = null
 ) : java.io.Serializable {
     companion object {
         const val ID_FULL = "idFull"
