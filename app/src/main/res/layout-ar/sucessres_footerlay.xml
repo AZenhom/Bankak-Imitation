@@ -69,7 +69,7 @@
                 android:layout_height="20dp"
                 android:gravity="center_vertical"
                 android:src="@drawable/download"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/downloadBtnTxt"
@@ -92,6 +92,7 @@
                 android:background="@drawable/download"
                 android:indeterminate="false"
                 android:progress="0"
+                android:visibility="gone"
                 android:progressDrawable="@drawable/circular_progress_bar" />
         </LinearLayout>
 

@@ -29,7 +29,7 @@
                 android:background="@drawable/animatedprosucess"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
-                android:src="@drawable/sucess8"/>
+                android:src="@drawable/sucess8" />
         </RelativeLayout>
 
         <RelativeLayout
