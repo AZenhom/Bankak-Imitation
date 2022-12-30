@@ -601,4 +601,6 @@
     <string name="last_three">آخر 3 شهور</string>
     <string name="by_date">تحديد التاريخ</string>
     <string name="bankak_fund_transfer">تحويل نقدي-بنكك</string>
+    <string name="saving_account">حساب توفير</string>
+    <string name="account_no">A/C -</string>
 </resources>

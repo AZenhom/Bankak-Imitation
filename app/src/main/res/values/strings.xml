@@ -658,4 +658,6 @@
     <string name="last_three">Last 3 Months</string>
     <string name="by_date">By Date</string>
     <string name="bankak_fund_transfer">Bankak Fund Transfer</string>
+    <string name="saving_account">Saving Account</string>
+    <string name="account_no">A/C -</string>
 </resources>

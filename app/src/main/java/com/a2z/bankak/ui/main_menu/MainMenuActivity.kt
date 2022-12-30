@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseActivity
 import com.a2z.bankak.databinding.ActivityNewMainMenuBinding
-import com.a2z.bankak.ui.account_details.statements_list.StatementsActivity
+import com.a2z.bankak.ui.account_details.details.AccountDetailsActivity
 import com.a2z.bankak.ui.history.history_list.TransactionHistoryActivity
 import com.a2z.bankak.ui.splash.SplashActivity
 import com.a2z.bankak.ui.transfer.transfer_menu.TransferMenuActivity
@@ -60,7 +60,7 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
         val adapter =
             MainMenuAdapter(displayMetrics.widthPixels) {
                 when (it.id) {
-                    0 -> openAccountSummaryActivity()
+                    0 -> openAccountDetailsActivity()
                     2 -> openTransferMenuActivity()
                     7 -> openTransactionHistoryActivity()
                     8 -> switchLanguage()
@@ -100,8 +100,8 @@ class MainMenuActivity : BaseActivity<ActivityNewMainMenuBinding, MainMenuViewMo
         }
     }
 
-    private fun openAccountSummaryActivity() {
-        startActivity(StatementsActivity.getIntent(this))
+    private fun openAccountDetailsActivity() {
+        startActivity(AccountDetailsActivity.getIntent(this))
     }
 
     private fun openTransferMenuActivity() {
