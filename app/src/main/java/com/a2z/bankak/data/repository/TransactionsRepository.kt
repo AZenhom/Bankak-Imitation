@@ -8,6 +8,7 @@ import com.a2z.bankak.data.model.response.StatefulResult
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.coroutines.tasks.await
+import java.util.Date
 import javax.inject.Inject
 
 class TransactionsRepository @Inject constructor(
@@ -29,13 +30,26 @@ class TransactionsRepository @Inject constructor(
         }
     }
 
-    suspend fun getUserTransactions(userID: String): StatefulResult<List<TransactionModel>> {
+    suspend fun getUserTransactions(
+        userID: String,
+        dateFrom: Date? = null,
+        dateTo: Date? = null,
+        limitTo: Int? = null
+    ): StatefulResult<List<TransactionModel>> {
         return try {
-            val documents =
-                fireStoreDB.collection(Constants.COLLECTION_TRANSACTION)
-                    .whereEqualTo(TransactionModel.FROM_ID, userID)
-                    .orderBy(Constants.CREATED_AT, Query.Direction.DESCENDING)
-                    .get().await()
+            val reference = fireStoreDB.collection(Constants.COLLECTION_TRANSACTION)
+            var query = reference.whereEqualTo(TransactionModel.FROM_ID, userID)
+            dateFrom?.let {
+                query = query.whereGreaterThanOrEqualTo(Constants.CREATED_AT, it)
+            }
+            dateTo?.let {
+                query = query.whereLessThanOrEqualTo(Constants.CREATED_AT, it)
+            }
+            query = query.orderBy(Constants.CREATED_AT, Query.Direction.DESCENDING)
+            limitTo?.let {
+                query = query.limit(limitTo.toLong())
+            }
+            val documents = query.get().await()
             StatefulResult.Success(documents.toObjects(TransactionModel::class.java))
         } catch (e: Exception) {
             e.printStackTrace()

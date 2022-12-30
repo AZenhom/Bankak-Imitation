@@ -1,23 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/stmtByDateLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="17sp" android:textColor="@color/titleClr" android:id="@+id/dateTile" android:background="@null" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20dp" android:text="@string/dateTile" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/borders" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
-        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <EditText android:enabled="false" android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edfDate" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/fdate" android:singleLine="true" android:maxLength="@integer/dateMaxLen" android:drawableRight="@drawable/datepicker" android:drawablePadding="10dp" android:inputType="number"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
-        <com.google.android.material.textfield.TextInputLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <EditText android:enabled="false" android:textColor="@color/fieldsTxtClr" android:textColorHint="@color/hintClr" android:id="@+id/edtDate" android:background="@null" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:hint="@string/tDate" android:singleLine="true" android:maxLength="@integer/dateMaxLen" android:drawableRight="@drawable/datepicker" android:drawablePadding="10dp" android:inputType="number"/>
-        </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stmtByDateLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/dateTile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:background="@null"
+        android:paddingLeft="5dp"
+        android:text="@string/dateTile"
+        android:textColor="@color/titleClr"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/borders"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDateFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiDateFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_vertical"
+                android:paddingTop="4dp">
+
+                <EditText
+                    android:id="@+id/edfDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@null"
+                    android:drawableRight="@drawable/datepicker"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/fdate"
+                    android:inputType="date"
+                    android:singleLine="true"
+                    android:textColor="@color/fieldsTxtClr"
+                    android:textColorHint="@color/hintClr" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/vDateFrom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tiDateFrom"
+                app:layout_constraintBottom_toBottomOf="@id/tiDateFrom"
+                app:layout_constraintRight_toRightOf="@id/tiDateFrom"
+                app:layout_constraintLeft_toLeftOf="@id/tiDateFrom"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDateTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiDateTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="4dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/edtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@null"
+                    android:drawableRight="@drawable/datepicker"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/tDate"
+                    android:inputType="date"
+                    android:singleLine="true"
+                    android:textColor="@color/fieldsTxtClr"
+                    android:textColorHint="@color/hintClr" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/vDateTo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tiDateTo"
+                app:layout_constraintBottom_toBottomOf="@id/tiDateTo"
+                app:layout_constraintRight_toRightOf="@id/tiDateTo"
+                app:layout_constraintLeft_toLeftOf="@id/tiDateTo"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp">
-        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/smtDownlay" android:background="@drawable/button" android:layout_width="110dp" android:layout_height="50dp" android:layout_margin="15dp">
-            <ImageView android:layout_gravity="center" android:id="@+id/downImg" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="10dp" android:src="@drawable/download" android:layout_centerVertical="true"/>
-            <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/downloadTxt" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downlaod" android:layout_toRightOf="@+id/downImg" android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/smtDownlay"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/downImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/download" />
+
+            <TextView
+                android:id="@+id/downloadTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/downImg"
+                android:paddingLeft="5dp"
+                android:text="@string/downlaod"
+                android:textColor="@color/white" />
         </RelativeLayout>
-        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/smtEmailLay" android:background="@drawable/button" android:layout_width="110dp" android:layout_height="50dp" android:layout_margin="15dp">
-            <ImageView android:layout_gravity="center" android:id="@+id/emialimg" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="10dp" android:src="@drawable/messagewhite" android:layout_centerVertical="true"/>
-            <TextView android:textColor="@color/white" android:gravity="left" android:id="@+id/emailTxt" android:paddingLeft="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/emailBtn" android:layout_toRightOf="@+id/emialimg" android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:id="@+id/smtEmailLay"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/emialimg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/messagewhite" />
+
+            <TextView
+                android:id="@+id/emailTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/emialimg"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="@string/emailBtn"
+                android:textColor="@color/white" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

@@ -582,7 +582,7 @@
     <string name="verification">التأكيد</string>
     <string name="viaATM">بإستخدام بطاقة الصراف الآلي</string>
     <string name="viaSecQues">الإجابة على اسئلة الامان</string>
-    <string name="viewStmt">عرض كشف \nالحساب</string>
+    <string name="viewStmt">عرض كشف الحساب</string>
     <string name="viewso">عرض</string>
     <string name="weak_txt">ضعيفة</string>
     <string name="yourDetTitle">تفاصيلك الخاصة</string>
@@ -595,4 +595,10 @@
     <string name="fund_transferred_to_other_accounts_with_id">تحويل إلى حسابات آخرى برقم</string>
     <string name="invalid_id_password">Invalid source. PLease contact Customer Care</string>
     <string name="invalid_account">Invalid source. Cannot find account with this Id</string>
+    <string name="last_five">آخر 5 معاملات</string>
+    <string name="last_seven">آخر 7 أيام</string>
+    <string name="last_thirty">آخر 30 يوم</string>
+    <string name="last_three">آخر 3 شهور</string>
+    <string name="by_date">تحديد التاريخ</string>
+    <string name="bankak_fund_transfer">تحويل نقدي-بنكك</string>
 </resources>

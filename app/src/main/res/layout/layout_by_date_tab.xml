@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:background="#eeeeee"
+    android:weightSum="5">
+
+    <RelativeLayout
+        android:id="@+id/rlLastFive"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/vvLastFive"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLastFive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+
+        <View
+            android:id="@+id/vhLastFive"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/headerbg"
+            android:layout_alignParentBottom="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="2dp"
+            android:gravity="center"
+            android:textColor="@color/textClr"
+            android:translationZ="10dp"
+            android:text="@string/last_five" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlLastSeven"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/vvLastSeven"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLastSeven"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+
+        <View
+            android:id="@+id/vhLastSeven"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/headerbg"
+            android:layout_alignParentBottom="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/last_seven"
+            android:textColor="@color/textClr"
+            android:layout_centerInParent="true"
+            android:translationZ="10dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlLastThirty"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/vvLastThirty"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLastThirty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+
+        <View
+            android:id="@+id/vhLastThirty"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/headerbg"
+            android:layout_alignParentBottom="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/last_thirty"
+            android:textColor="@color/textClr"
+            android:layout_centerInParent="true"
+            android:translationZ="10dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlLastThree"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/vvLastThree"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLastThree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+
+        <View
+            android:id="@+id/vhLastThree"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/headerbg"
+            android:layout_alignParentBottom="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="2dp"
+            android:gravity="center"
+            android:textColor="@color/textClr"
+            android:translationZ="10dp"
+            android:text="@string/last_three" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlByDate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvByDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+
+        <View
+            android:id="@+id/vhByDate"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/headerbg"
+            android:layout_alignParentBottom="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="2dp"
+            android:gravity="center"
+            android:text="@string/by_date"
+            android:textColor="@color/textClr"
+            android:translationZ="10dp" />
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

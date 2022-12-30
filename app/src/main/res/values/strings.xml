@@ -652,4 +652,10 @@
     <string name="fund_transferred_to_other_accounts_with_id">Fund transferred to account number</string>
     <string name="invalid_id_password">Invalid source. PLease contact Customer Care</string>
     <string name="invalid_account">Invalid source. Cannot find account with this Id</string>
+    <string name="last_five">Last 5 Trx</string>
+    <string name="last_seven">Last 7 Days</string>
+    <string name="last_thirty">Last 30 Days</string>
+    <string name="last_three">Last 3 Months</string>
+    <string name="by_date">By Date</string>
+    <string name="bankak_fund_transfer">Bankak Fund Transfer</string>
 </resources>
