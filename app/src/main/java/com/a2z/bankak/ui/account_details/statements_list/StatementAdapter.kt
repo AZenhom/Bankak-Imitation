@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.a2z.bankak.core.utils.formatNumber
 import com.a2z.bankak.core.utils.getDateText
 import com.a2z.bankak.data.model.TransactionModel
 import com.a2z.bankak.databinding.ItemNewStatementBinding
@@ -35,10 +36,8 @@ class StatementAdapter :
         fun bind(item: TransactionModel) {
             with(binding) {
                 // Item Data
-                miniDate.text =
-                    item.createdAt?.time?.getDateText("dd-MMM-yyyy")
-                miniBal.text =
-                    "${item.amount?.toString()}"
+                miniDate.text = item.createdAt?.time?.getDateText("dd-MMM-yyyy")
+                miniBal.text = item.amount?.formatNumber()
             }
         }
     }

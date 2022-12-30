@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseViewModel
+import com.a2z.bankak.core.utils.formatNumber
 import com.a2z.bankak.core.utils.getDateText
 import com.a2z.bankak.data.cache.SettingsDataStore
 import com.a2z.bankak.data.model.TransactionModel
@@ -37,7 +38,7 @@ class TransferSuccessViewModel @Inject constructor(
         titles.add(Pair(textArray[4], transaction?.toName ?: notAvailable))
         titles.add(Pair(textArray[5], transaction?.toMobile ?: notAvailable))
         titles.add(Pair(textArray[6], transaction?.comment ?: notAvailable))
-        titles.add(Pair(textArray[7], transaction?.amount?.toString() ?: notAvailable))
+        titles.add(Pair(textArray[7], transaction?.amount?.formatNumber() ?: notAvailable))
         return titles
     }
 

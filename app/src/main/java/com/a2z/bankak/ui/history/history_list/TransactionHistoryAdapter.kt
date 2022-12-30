@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.a2z.bankak.R
+import com.a2z.bankak.core.utils.formatNumber
 import com.a2z.bankak.core.utils.getDateText
 import com.a2z.bankak.data.model.TransactionModel
 import com.a2z.bankak.databinding.NewItemTransactionHistoryBinding
@@ -40,7 +41,7 @@ class TransactionHistoryAdapter constructor(
                 trxDate.text =
                     item.createdAt?.time?.getDateText("dd-MMM-yyyy")
                 trxAmt.text =
-                    "${trxAmt.context.getString(R.string.sdg)}. ${item.amount?.toString()}"
+                    "${trxAmt.context.getString(R.string.sdg)}. ${item.amount?.formatNumber()}"
                 trxDescr.text =
                     "${trxDescr.context.getString(R.string.fund_transferred_to_other_accounts_with_id)}\n${item.toId}"
 

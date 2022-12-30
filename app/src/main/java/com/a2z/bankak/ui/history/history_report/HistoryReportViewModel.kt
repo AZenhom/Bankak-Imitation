@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import com.a2z.bankak.R
 import com.a2z.bankak.core.base.BaseViewModel
+import com.a2z.bankak.core.utils.formatNumber
 import com.a2z.bankak.core.utils.getDateText
 import com.a2z.bankak.data.cache.SettingsDataStore
 import com.a2z.bankak.data.model.TransactionModel
@@ -37,7 +38,7 @@ class HistoryReportViewModel @Inject constructor(
                 context.getString(R.string.fund_transferred_to_other_account)
             )
         )
-        titles.add(Pair(textArray[3], transaction?.amount?.toString() ?: notAvailable))
+        titles.add(Pair(textArray[3], transaction?.amount?.formatNumber() ?: notAvailable))
         titles.add(Pair(textArray[4], transaction?.fromId ?: notAvailable))
         titles.add(Pair(textArray[5], transaction?.toId ?: notAvailable))
         titles.add(Pair(textArray[6], context.getString(R.string.sucess_digTitle)))
