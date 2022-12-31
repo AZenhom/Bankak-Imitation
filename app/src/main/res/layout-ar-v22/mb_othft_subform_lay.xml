@@ -38,7 +38,7 @@
                 android:drawablePadding="10dp"
                 android:editable="false"
                 android:focusable="false"
-                android:gravity="center"
+                android:gravity="right"
                 android:hint="@string/accSelHint"
                 android:textColor="@color/fieldsTxtClr"
                 android:textColorHint="@color/hintClr" />
@@ -58,7 +58,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="0dp"
             android:background="@null"
-            android:gravity="center"
+            android:gravity="right"
             android:orientation="horizontal">
 
             <ImageView
@@ -82,7 +82,7 @@
                     android:layout_margin="15dp"
                     android:background="@null"
                     android:drawablePadding="10dp"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:hint="@string/mbnoHint"
                     android:importantForAutofill="noExcludeDescendants"
                     android:inputType="number"
@@ -115,7 +115,7 @@
                 android:background="@null"
                 android:drawableLeft="@drawable/money"
                 android:drawablePadding="10dp"
-                android:gravity="center"
+                android:gravity="right"
                 android:hint="@string/amtHint"
                 android:inputType="number"
                 android:maxLength="@integer/amtMaxLen"
@@ -146,7 +146,7 @@
                 android:background="@null"
                 android:drawableLeft="@drawable/comment"
                 android:drawablePadding="10dp"
-                android:gravity="center"
+                android:gravity="right"
                 android:hint="@string/remarksHint"
                 android:inputType="text"
                 android:maxLength="@integer/commentMaxLen"

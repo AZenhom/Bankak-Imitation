@@ -46,8 +46,11 @@ class AccountDetailsActivity :
     private fun getProfile() {
         viewModel.getProfile().observe(this) {
             with(binding.summary) {
-                accNo.text = "${getString(R.string.account_no)} ${it.idFull}"
+                var accNoText = "${getString(R.string.account_no)} ${it.idFull}"
+                if (!it.iban.isNullOrEmpty()) accNoText += "\n${getString(R.string.iban_no)} ${it.iban}"
+                accNo.text = accNoText
                 accBal.text = it.credit?.formatNumber()
+                accType.text = it.type
             }
         }
     }

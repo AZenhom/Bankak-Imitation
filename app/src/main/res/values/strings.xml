@@ -660,5 +660,6 @@
     <string name="bankak_fund_transfer">Bankak Fund Transfer</string>
     <string name="saving_account">Saving Account</string>
     <string name="account_no">A/C -</string>
+    <string name="iban_no">IBAN -</string>
     <string name="failed">Failed</string>
 </resources>

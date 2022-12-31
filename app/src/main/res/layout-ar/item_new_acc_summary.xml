@@ -75,7 +75,7 @@
                         android:id="@+id/accType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/saving_account"
+                        tools:text="@string/saving_account"
                         android:textColor="@color/accType"
                         android:textSize="15sp"
                         android:gravity="right"

@@ -602,6 +602,7 @@
     <string name="by_date">تحديد التاريخ</string>
     <string name="bankak_fund_transfer">تحويل نقدي-بنكك</string>
     <string name="saving_account">حساب توفير</string>
-    <string name="account_no">A/C -</string>
+    <string name="account_no">الحساب -</string>
+    <string name="iban_no">IBAN -</string>
     <string name="failed">فشل</string>
 </resources>
