@@ -19,7 +19,9 @@ class TransferStepOneViewModel @Inject constructor(
         val liveData = LiveEvent<UserModel?>()
         safeLauncher {
             showLoading()
-            val result = userRepository.getUserByIdFull(id)
+            var result = userRepository.getUserByIdFull(id)
+            if (result is StatefulResult.Error || result.data == null)
+                result = userRepository.getUserById(id)
             hideLoading()
             if (result is StatefulResult.Success && result.data != null) {
                 liveData.value = result.data

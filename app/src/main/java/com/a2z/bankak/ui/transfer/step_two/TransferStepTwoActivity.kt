@@ -88,13 +88,23 @@ class TransferStepTwoActivity :
                 topMargin = resources.getDimension(R.dimen._20dp).toInt()
             }
         }
+        val tv3 = AppCompatTextView(this@TransferStepTwoActivity).apply {
+            text = "  :  "
+            typeface = Typeface.DEFAULT_BOLD
+            setTextColor(resources.getColor(R.color.black, null))
+            layoutParams = TableRow.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT).apply {
+                topMargin = resources.getDimension(R.dimen._20dp).toInt()
+            }
+        }
         if (locale == "ar") {
             tv2.gravity = Gravity.RIGHT
             addView(tv2)
+            addView(tv3)
             addView(tv1)
         } else {
             tv2.gravity = Gravity.LEFT
             addView(tv1)
+            addView(tv3)
             addView(tv2)
         }
     }
