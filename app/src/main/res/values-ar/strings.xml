@@ -589,7 +589,7 @@
     <string name="youtube">يوتيوب</string>
     <string name="youtubeURL">https://www.youtube.com/channel/UCL46EYOz7AgIqVsOYPa9Lag</string>
     <string name="zerotoonerate">لم احبه</string>
-    <string name="not_available">غير موجود</string>
+    <string name="not_available">N/A</string>
     <string name="no_enough_balance">لا يوجد رصيد كافى لاجراء المعاملة</string>
     <string name="fund_transferred_to_other_account">تحويل إلى حساب آخر</string>
     <string name="fund_transferred_to_other_accounts_with_id">تحويل إلى حسابات آخرى برقم</string>
