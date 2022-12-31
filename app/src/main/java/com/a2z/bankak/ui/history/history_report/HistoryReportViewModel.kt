@@ -38,7 +38,12 @@ class HistoryReportViewModel @Inject constructor(
                 context.getString(R.string.fund_transferred_to_other_account)
             )
         )
-        titles.add(Pair(textArray[3], transaction?.amount?.formatNumber() ?: notAvailable))
+        titles.add(
+            Pair(
+                textArray[3],
+                transaction?.amount?.formatNumber()?.plus(".00") ?: notAvailable
+            )
+        )
         titles.add(Pair(textArray[4], transaction?.fromIdFormatted() ?: notAvailable))
         titles.add(Pair(textArray[5], transaction?.toIdFormatted() ?: notAvailable))
         titles.add(Pair(textArray[6], context.getString(R.string.sucess_digTitle)))

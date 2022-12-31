@@ -38,7 +38,12 @@ class TransferSuccessViewModel @Inject constructor(
         titles.add(Pair(textArray[4], transaction?.toName ?: notAvailable))
         titles.add(Pair(textArray[5], transaction?.toMobile ?: notAvailable))
         titles.add(Pair(textArray[6], transaction?.comment ?: notAvailable))
-        titles.add(Pair(textArray[7], transaction?.amount?.formatNumber() ?: notAvailable))
+        titles.add(
+            Pair(
+                textArray[7],
+                transaction?.amount?.formatNumber()?.plus(".00") ?: notAvailable
+            )
+        )
         return titles
     }
 
