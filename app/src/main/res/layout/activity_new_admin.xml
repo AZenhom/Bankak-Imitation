@@ -6,8 +6,7 @@
     <ScrollView
         android:id="@+id/mail_lay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/footerr">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -118,8 +117,86 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/borders"
-                    android:gravity="center"
                     android:layout_below="@+id/lay2"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etIBAN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="IBAN"
+                            android:inputType="text"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay4"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:layout_below="@+id/lay3"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="55dp"
+                        android:paddingTop="4dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:hint="Account type"
+                            android:inputType="text"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/fieldsTxtClr"
+                            android:textColorHint="@color/hintClr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="60dp"
+                        android:src="@drawable/loginmanicon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay5"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/borders"
+                    android:gravity="center"
+                    android:layout_below="@+id/lay4"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
@@ -153,11 +230,11 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/lay4"
+                    android:id="@+id/lay6"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/borders"
-                    android:layout_below="@+id/lay3"
+                    android:layout_below="@+id/lay5"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -192,12 +269,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/lay5"
+                    android:id="@+id/lay7"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/borders"
                     android:gravity="center"
-                    android:layout_below="@+id/lay4"
+                    android:layout_below="@+id/lay6"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
@@ -231,10 +308,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/lay6"
+                    android:id="@+id/lay8"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_below="@+id/lay5"
+                    android:layout_below="@+id/lay7"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/borders"
                     android:gravity="center"
@@ -274,7 +351,7 @@
                     android:id="@+id/registerBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lay6"
+                    android:layout_below="@+id/lay8"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button"
                     android:scaleType="fitCenter"

@@ -26,6 +26,8 @@ class AdminActivity : BaseActivity<ActivityNewAdminBinding, AdminViewModel>() {
         registerBtn.setOnClickListener {
             val id = etId.text.toString().trim()
             val idFull = etIdFull.text.toString().trim()
+            val iban = etIBAN.text.toString().trim()
+            val type = etType.text.toString().trim()
             val name = etName.text.toString().trim()
             val branch = etBranch.text.toString().trim()
             val credit = try {
@@ -36,6 +38,8 @@ class AdminActivity : BaseActivity<ActivityNewAdminBinding, AdminViewModel>() {
             val password = edmbPwd.text.toString().trim()
             if (id.isEmpty() ||
                 idFull.isEmpty() ||
+                iban.isEmpty() ||
+                type.isEmpty() ||
                 name.isEmpty() ||
                 branch.isEmpty() ||
                 password.isEmpty()
@@ -43,7 +47,7 @@ class AdminActivity : BaseActivity<ActivityNewAdminBinding, AdminViewModel>() {
                 showWarningMsg(getString(R.string.fieldsEmp_Err))
                 return@setOnClickListener
             }
-            viewModel.register(id, idFull, name, branch, credit, password)
+            viewModel.register(id, idFull, iban, type, name, branch, credit, password)
                 .observe(this@AdminActivity) {
                     if (it) {
                         showSuccessMsg("Account Created Successfully")

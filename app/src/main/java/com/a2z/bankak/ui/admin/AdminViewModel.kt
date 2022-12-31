@@ -18,6 +18,8 @@ class AdminViewModel @Inject constructor(
     fun register(
         id: String,
         idFull: String,
+        iban: String,
+        type: String,
         name: String,
         branch: String,
         credit: Int,
@@ -28,7 +30,8 @@ class AdminViewModel @Inject constructor(
             id = id,
             idFull = idFull,
             name = name,
-            type = "Saving Account",
+            iban = iban,
+            type = type,
             branch = branch,
             credit = credit,
             password = password,
