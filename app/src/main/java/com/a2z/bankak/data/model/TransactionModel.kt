@@ -15,4 +15,8 @@ data class TransactionModel(
     companion object {
         const val FROM_ID = "fromId"
     }
+
+    fun fromIdFormatted() = fromId?.chunked(4)?.joinToString(" ")
+
+    fun toIdFormatted() = toId?.chunked(4)?.joinToString(" ")
 }

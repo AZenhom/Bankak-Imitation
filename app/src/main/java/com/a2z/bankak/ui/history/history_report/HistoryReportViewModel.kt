@@ -39,8 +39,8 @@ class HistoryReportViewModel @Inject constructor(
             )
         )
         titles.add(Pair(textArray[3], transaction?.amount?.formatNumber() ?: notAvailable))
-        titles.add(Pair(textArray[4], transaction?.fromId ?: notAvailable))
-        titles.add(Pair(textArray[5], transaction?.toId ?: notAvailable))
+        titles.add(Pair(textArray[4], transaction?.fromIdFormatted() ?: notAvailable))
+        titles.add(Pair(textArray[5], transaction?.toIdFormatted() ?: notAvailable))
         titles.add(Pair(textArray[6], context.getString(R.string.sucess_digTitle)))
         titles.add(Pair(textArray[7], transaction?.toName ?: notAvailable))
         titles.add(

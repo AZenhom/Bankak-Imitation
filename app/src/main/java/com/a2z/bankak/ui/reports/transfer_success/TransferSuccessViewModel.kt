@@ -33,8 +33,8 @@ class TransferSuccessViewModel @Inject constructor(
                 transaction?.createdAt?.time?.getDateText("dd-MMM-yyyy HH:mm:ss") ?: notAvailable
             )
         )
-        titles.add(Pair(textArray[2], transaction?.fromId ?: notAvailable))
-        titles.add(Pair(textArray[3], transaction?.toId ?: notAvailable))
+        titles.add(Pair(textArray[2], transaction?.fromIdFormatted() ?: notAvailable))
+        titles.add(Pair(textArray[3], transaction?.toIdFormatted() ?: notAvailable))
         titles.add(Pair(textArray[4], transaction?.toName ?: notAvailable))
         titles.add(Pair(textArray[5], transaction?.toMobile ?: notAvailable))
         titles.add(Pair(textArray[6], transaction?.comment ?: notAvailable))
