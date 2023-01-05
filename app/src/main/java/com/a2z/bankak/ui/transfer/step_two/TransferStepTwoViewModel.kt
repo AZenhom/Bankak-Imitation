@@ -28,6 +28,14 @@ class TransferStepTwoViewModel @Inject constructor(
 
     val account: UserModel? = savedStateHandle[TransferStepTwoActivity.ACCOUNT]
 
+    fun getProfile(): LiveData<UserModel> {
+        val liveData = LiveEvent<UserModel>()
+        safeLauncher {
+            liveData.value = userRepository.getCurrentUserModel()
+        }
+        return liveData
+    }
+
     fun getAccountTable(context: Context): List<Pair<String, String>> {
         val titles = mutableListOf<Pair<String, String>>()
         val textArray = context.resources.getStringArray(R.array.account_params)

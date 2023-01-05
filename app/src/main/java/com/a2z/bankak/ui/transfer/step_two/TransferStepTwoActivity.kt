@@ -53,7 +53,9 @@ class TransferStepTwoActivity :
             tabOne.text = getString(R.string.payDirecTab)
         }
         with(binding.tableLayout) {
-            edtAccSpinner.setText(viewModel.account?.idFull.toString())
+            viewModel.getProfile().observe(this@TransferStepTwoActivity) {
+                edtAccSpinner.setText(it.idFull)
+            }
         }
         with(binding.tableLayout.btnsLayout) {
             registerViewOnBackPressed(btnCancel)
@@ -92,9 +94,10 @@ class TransferStepTwoActivity :
             text = "  :  "
             typeface = Typeface.DEFAULT_BOLD
             setTextColor(resources.getColor(R.color.black, null))
-            layoutParams = TableRow.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT).apply {
-                topMargin = resources.getDimension(R.dimen._20dp).toInt()
-            }
+            layoutParams =
+                TableRow.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT).apply {
+                    topMargin = resources.getDimension(R.dimen._20dp).toInt()
+                }
         }
         if (locale == "ar") {
             tv2.gravity = Gravity.RIGHT
